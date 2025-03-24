@@ -1,3 +1,4 @@
+/* eslint-disable import/no-anonymous-default-export */
 /** @type {import('tailwindcss').Config} */
 export default {
   content: [
@@ -8,8 +9,13 @@ export default {
   theme: {
     extend: {
       colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
+        shadow: "#323232",
+        primary: "#14FFEC",
+      },
+      fontFamily: {
+        title: ["Inconsolata", "monospace"],
+        main: ["Poppins", "sans-serif"],
+        body: ["Montserrat", "sans-serif"],
       },
     },
   },
