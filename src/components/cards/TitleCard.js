@@ -4,9 +4,9 @@ import PropTypes from "prop-types";
 const TitleCard = ({ text, className }) => {
   return (
     <div
-      className={`w-full p-4 bg-shadow rounded-3xl shadow-md shadow-primary justify-center ${className}`}
+      className={`bg-shadow shadow-primary w-full max-w-md justify-center rounded-3xl p-4 shadow-md ${className}`}
     >
-      <h1 className="text-6xl font-bold font-title text-center text-white">
+      <h1 className="font-title text-center text-4xl font-bold text-white">
         {text}
       </h1>
     </div>

@@ -1,29 +1,56 @@
 import React from "react";
 
-import TimelineCard from "@/components/cards/TimelineCard";
+// UI
+// import {
+//   ContactLink,
+//   IconButton,
+//   LinkButton,
+//   ViewAllButton,
+// } from "@/components/buttons";
+import { Icon, SkillsShowcase } from "@/components/ui";
+import {
+  ProjectCard,
+  ProfileCard,
+  TimelineCard,
+  TitleCard,
+} from "@/components/cards";
+import { SideBar, BottomNavigation } from "@/components/layout";
+import { HomeFilled, GithubFilled } from "@ant-design/icons";
 
 const Test = () => {
   return (
-    <div className="flex flex-col h-screen justify-center items-center">
-      <TimelineCard
-        from="Sep 2024"
-        to="Present"
-        title="Software Engineer"
-        subTitle="Google"
-        tags={["React", "Node.js", "Firebase"]}
+    <div className="flex h-screen flex-col items-center justify-center gap-8">
+      {/* <BottomNavigation /> */}
+      {/* <SkillsShowcase /> */}
+
+      {/* <ProjectCard
+        image="/project/cms.png"
+        title={"Clinic Management System"}
+        details={{
+          source: "https://www.example.com",
+          live: "www.example.com",
+          description: "This is a project description",
+          keyPoints: ["point 1", "point 2", "point 3"],
+          tags: ["tag 1", "tag 2", "tag 3"],
+        }}
+      /> */}
+
+      {/* <ProfileCard variant="headline" headlineText="Designing, the future" /> */}
+
+      {/* <TimelineCard
+        title="Software Developer"
+        org="Company Name"
+        from="Sep 2019"
+        to="Oct 2021"
+        tags={["React", "Node", "MongoDB", "Express"]}
       >
-        <p>
-          I work as a Software Engineer at Google, where I help build scalable
-          and efficient web applications. My role involves collaborating with
-          cross-functional teams to design, develop, and deploy innovative
-          solutions that meet the needs of our users.
-        </p>
-        <p>
-          I specialize in front-end technologies such as React and back-end
-          technologies like Node.js. I also have experience working with
-          Firebase for serverless applications.
-        </p>
-      </TimelineCard>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla
+        consectetur, justo eget aliquam fermentum, turpis ex dignissim tortor,
+        nec tristique mi nunc sit amet libero. Nullam nec consectetur lacus.
+      </TimelineCard> */}
+
+      {/* <TitleCard text={"Portfolio"} /> */}
+      {/* <SideBar /> */}
     </div>
   );
 };

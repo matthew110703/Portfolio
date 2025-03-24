@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+import { usePathname } from "next/navigation";
 import Link from "next/link";
 
 const IconButton = ({
@@ -8,20 +8,23 @@ const IconButton = ({
   href = "/",
   className,
   size = 32,
-  active = false,
   activeIcon,
-  ariaLabel = "icon",
   onClick,
+  title = "",
+  ...rest
 }) => {
+  const pathname = usePathname();
   return (
     <Link
       role="button"
       href={href}
       className={`text-primary w-${size / 4} ${className}`}
-      aria-label={ariaLabel}
+      aria-label={title}
       onClick={onClick}
+      title={title}
+      {...rest}
     >
-      {activeIcon && active ? activeIcon : icon}
+      {activeIcon && pathname === href ? activeIcon : icon}
     </Link>
   );
 };

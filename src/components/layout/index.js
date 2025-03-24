@@ -1,4 +1,5 @@
 import Container from "./Container";
-import Navbar from "./Navbar";
+import SideBar from "./SideBar";
+import BottomNavigation from "./BottomNavigation";
 
-export { Container, Navbar };
+export { Container, SideBar, BottomNavigation };

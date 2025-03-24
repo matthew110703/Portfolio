@@ -1,50 +1,54 @@
+import { Icon } from "@/components/ui";
 import {
-  Home,
   HomeOutlined,
-  Info,
-  InfoOutlined,
-  AssignmentInd,
-  AssignmentIndOutlined,
-  WavingHand,
-  WavingHandOutlined,
-} from "@mui/icons-material";
+  HomeFilled,
+  InfoCircleFilled,
+  InfoCircleOutlined,
+  ProductFilled,
+  ProductOutlined,
+} from "@ant-design/icons";
 
 export const navigationLinks = [
-  { label: "Home", icon: <HomeOutlined />, activeIcon: <Home />, href: "/" },
+  {
+    label: "Home",
+    icon: <HomeOutlined style={{ fontSize: "24px" }} />,
+    activeIcon: <HomeFilled style={{ fontSize: "24px" }} />,
+    href: "/",
+  },
   {
     label: "About",
-    icon: <InfoOutlined />,
-    activeIcon: <Info />,
+    icon: <InfoCircleOutlined style={{ fontSize: "24px" }} />,
+    activeIcon: <InfoCircleFilled style={{ fontSize: "24px" }} />,
     href: "/about",
   },
   {
     label: "Portfolio",
-    icon: <AssignmentIndOutlined />,
-    activeIcon: <AssignmentInd />,
+    icon: <ProductOutlined style={{ fontSize: "24px" }} />,
+    activeIcon: <ProductFilled style={{ fontSize: "24px" }} />,
     href: "/portfolio",
   },
   {
     label: "Say Hi!",
-    icon: <WavingHandOutlined />,
-    activeIcon: <WavingHand />,
+    icon: <Icon size={24} src="/icons/waving-hand.svg" />,
+    activeIcon: <Icon size={24} src="/icons/waving-hand-filled.svg" />,
     href: "/contact",
   },
 ];
 
-// Card Actions
-import { OpenInNewOutlined } from "@mui/icons-material";
-import { Icon } from "@/components";
-export const cardActions = {
-  cms: [
-    {
-      label: "Live Demo",
-      icon: <OpenInNewOutlined fontSize="small" />,
-      href: "/",
-    },
-    {
-      label: "Live Demo",
-      icon: <Icon src={"/icons/github.svg"} size={16} />,
-      href: "/",
-    },
-  ],
-};
+// // Card Actions
+// import { OpenInNewOutlined } from "@mui/icons-material";
+// import { Icon } from "@/components";
+// export const cardActions = {
+//   cms: [
+//     {
+//       label: "Live Demo",
+//       icon: <OpenInNewOutlined fontSize="small" />,
+//       href: "/",
+//     },
+//     {
+//       label: "Live Demo",
+//       icon: <Icon src={"/icons/github.svg"} size={16} />,
+//       href: "/",
+//     },
+//   ],
+// };

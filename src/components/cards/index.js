@@ -1,6 +1,6 @@
-import Card from "./Card";
+import ProjectCard from "./ProjectCard";
 import ProfileCard from "./ProfileCard";
 import TimelineCard from "./TimelineCard";
 import TitleCard from "./TitleCard";
 
-export { Card, ProfileCard, TimelineCard, TitleCard };
+export { ProjectCard, ProfileCard, TimelineCard, TitleCard };

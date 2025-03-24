@@ -1,5 +1,5 @@
-import BottomNavigation from "./BottomNavigation";
 import Icon from "./Icon";
 import SkillsShowcase from "./SkillsShowcase";
+import Tag from "./Tag";
 
-export { BottomNavigation, Icon, SkillsShowcase };
+export { Icon, SkillsShowcase, Tag };

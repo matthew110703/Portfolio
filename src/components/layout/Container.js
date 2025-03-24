@@ -1,16 +1,16 @@
 import React from "react";
 
 // UI components
-import Navbar from "./Navbar";
-import BottomNavigation from "../ui/BottomNavigation";
+import SideBar from "./SideBar";
+import BottomNavigation from "./BottomNavigation";
 
 const Container = ({ children }) => {
   return (
-    <main className="h-screen w-screen flex flex-col justify-center items-center">
-      <div className="relative lg:pl-20 py-3 md:px-6 md:container mx-auto bg-black rounded-3xl overflow-auto mb-16 lg:mb-0">
-        <Navbar />
-        <BottomNavigation />
+    <main className="grid h-screen place-items-center">
+      <div className="flex max-h-full w-full max-w-7xl flex-col rounded-3xl bg-black p-4 md:h-[720px] md:max-h-[720px] lg:flex-row">
+        <SideBar className={"place-self-center"} />
         {children}
+        <BottomNavigation />
       </div>
     </main>
   );

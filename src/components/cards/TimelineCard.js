@@ -1,4 +1,5 @@
-import React from "react";
+// UI
+import { Tag } from "../ui";
 
 /**
  * @name TimelineCard
@@ -16,39 +17,32 @@ const TimelineCard = ({
   from,
   to,
   title,
-  subTitle,
+  org,
   tags = [],
-  link = "#",
+  link = "https://example.com",
 }) => {
   return (
-    <article className="w-full md:flex items-start gap-x-12 px-4 py-2">
-      <time className="font-light text-gray-400 font-main text-sm text-nowrap">
+    <article className="w-full items-start gap-x-12 px-4 py-2 sm:flex">
+      <time className="font-main text-sm font-light text-nowrap text-gray-400">
         {from} - {to}
       </time>
       <section className="space-y-2">
         <header>
           <h3 className="text-base font-bold">{title}</h3>
           <a
-            className="text-sm font-semibold text-gray-500"
+            className="hover:text-primary text-sm font-semibold text-gray-500 after:ml-1 after:align-top hover:after:content-['↗']"
             href={link}
             target="_blank"
             rel="noreferrer"
           >
-            {subTitle}
+            {org}
           </a>
         </header>
-        <summary className="list-none font-light font-body text-sm">
-          {children}
-        </summary>
+        <p className="font-body text-sm font-light">{children}</p>
         <footer>
           <ul className="flex flex-wrap gap-x-2">
-            {tags?.map((tag, index) => (
-              <li
-                key={index}
-                className="text-xs font-semibold bg-primary bg-opacity-25 text-primary px-2 py-1 rounded-full"
-              >
-                {tag}
-              </li>
+            {tags.map((tag) => (
+              <Tag key={tag} title={tag} />
             ))}
           </ul>
         </footer>

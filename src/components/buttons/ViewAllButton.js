@@ -1,34 +1,23 @@
 import React from "react";
-import PropTypes from "prop-types";
 
 // Next imports
-import Image from "next/image";
 import Link from "next/link";
 
-// MUI icons
-import { OpenInNewOutlined } from "@mui/icons-material";
+// Icons
+import { ExportOutlined } from "@ant-design/icons";
 
-const ViewAllButton = ({ className, image, href }) => {
+const ViewAllButton = ({ className, image, href, children }) => {
   return (
-    <Link href={href || "/"}>
-      <div className={`relative h-2/3 ${className}`}>
-        <Image src={image || ""} alt="view all" fill />
+    <Link href={href || "/"} className="overflow-hidden rounded-3xl bg-white">
+      <div className="h-32">{children}</div>
+      <div className="bg-primary flex w-[150px] min-w-[100px] justify-center gap-4 rounded-3xl px-4 py-6">
+        <p className="text-shadow text-lg font-semibold">View All</p>
+        <ExportOutlined
+          style={{ color: "var(--color-shadow)", fontSize: "24px" }}
+        />
       </div>
-      <aside className="bg-primary h-1/3 rounded-b-3xl flex gap-x-2 justify-center items-center">
-        <h2 className="text-xl text-shadow font-semibold leading-5">
-          View <br />
-          <span className="text-sm font-light">All Projects</span>
-        </h2>
-        <OpenInNewOutlined color="info" />
-      </aside>
     </Link>
   );
-};
-
-ViewAllButton.propTypes = {
-  className: PropTypes.string,
-  image: PropTypes.string,
-  href: PropTypes.string,
 };
 
 export default ViewAllButton;

@@ -1,28 +1,20 @@
-"use client";
-
-import React, { useState } from "react";
-
 // UI components
 import IconButton from "../buttons/IconButton";
 import { navigationLinks } from "@/lib/constants";
 
 const BottomNavigation = () => {
-  const [activeTab, setActiveTab] = useState(0);
-
   return (
-    <div className="lg:hidden fixed left-1/2 bottom-2 transform -translate-x-1/2 w-full max-w-screen-md  bg-shadow p-4 rounded-3xl">
+    <div className="bg-shadow fixed bottom-2 w-full rounded-3xl p-4 lg:hidden">
       <nav>
-        <ul className="list-none flex justify-around">
+        <ul className="flex list-none justify-around">
           {navigationLinks.map((nav, idx) => {
             return (
               <li key={idx}>
                 <IconButton
                   icon={nav.icon}
                   activeIcon={nav.activeIcon}
-                  active={activeTab === idx}
-                  ariaLabel={nav.label}
-                  onClick={() => setActiveTab(idx)}
                   href={nav.href}
+                  title={nav.label}
                 />
               </li>
             );
