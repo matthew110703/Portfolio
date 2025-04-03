@@ -9,6 +9,8 @@ const Icon = ({ src, alt = "icon", size = 16, className }) => {
       height={size}
       className={`${className}`}
       aria-label={alt}
+      title={alt}
+      loading="lazy"
     />
   );
 };

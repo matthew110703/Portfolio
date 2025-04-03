@@ -1,0 +1,45 @@
+// UI
+import { ContactLink, LinkButton } from "@/components/buttons";
+
+// Icons
+import { Icon } from "@/components/ui";
+import {
+  LinkedinFilled,
+  GithubOutlined,
+  XOutlined,
+  MailFilled,
+} from "@ant-design/icons";
+
+import portfolio from "@/lib/portfolio.json";
+
+const ContactOverview = ({ className }) => {
+  return (
+    <div className={`flex flex-col items-center gap-4 ${className}`}>
+      <ContactLink icon={<MailFilled />} text={portfolio.email} />
+      <ContactLink
+        icon={<Icon src={"/icons/pin.svg"} alt="pin" size={24} />}
+        text={portfolio.location}
+      />
+
+      <div className="flex flex-wrap gap-4">
+        <LinkButton
+          icon={<LinkedinFilled />}
+          href={portfolio.social.linkedin}
+          text={"LinkedIn"}
+        />
+        <LinkButton
+          icon={<GithubOutlined />}
+          href={portfolio.social.github}
+          text={"Github"}
+        />
+        <LinkButton
+          icon={<XOutlined />}
+          href={portfolio.social.twitter}
+          text={"Twitter"}
+        />
+      </div>
+    </div>
+  );
+};
+
+export default ContactOverview;

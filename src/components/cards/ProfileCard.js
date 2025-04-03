@@ -11,11 +11,13 @@ import { Icon } from "../ui";
 // Icons
 import { GithubFilled, DownloadOutlined } from "@ant-design/icons";
 
+import portfolio from "@/lib/portfolio.json";
+
 const ProfileCard = ({ variant = "compact", headlineText = "" }) => {
   const variantStyles = {
-    compact: "h-[600px]",
+    compact: "h-[600px] ",
     minimal: "w-1/3",
-    headline: "",
+    headline: "w-[30%] h-[80px]",
   };
 
   // Element attributes based on variant (for responsive design)
@@ -27,13 +29,13 @@ const ProfileCard = ({ variant = "compact", headlineText = "" }) => {
       avatarSize: 200,
     },
     headline: {
-      avatarSize: 128,
+      avatarSize: 60,
     },
   };
 
   return (
     <div
-      className={`bg-primary text-shadow flex w-full flex-col justify-between rounded-3xl transition-all sm:w-[400px] ${variantStyles[variant]}`}
+      className={`bg-primary text-shadow flex min-w-full flex-col justify-between rounded-3xl transition-all md:min-w-[400px] ${variantStyles[variant]} ${variant === "headline" ? "hidden lg:flex" : ""}`}
     >
       {/* Sub-Heading Section  */}
       {variant === "compact" && (
@@ -54,12 +56,14 @@ const ProfileCard = ({ variant = "compact", headlineText = "" }) => {
       {/* Body  */}
       <section id="profile-body">
         <div
-          className={`w-full gap-4 p-8 ${variant === "headline" ? "hidden flex-row md:flex" : "flex flex-col"}`}
+          className={`flex w-full gap-4 ${variant === "headline" ? "flex-row-reverse items-center justify-center p-1.5 md:flex" : "flex-col p-8"}`}
         >
           {/* Headline  */}
           {variant === "headline" && (
             <div>
-              <h1 className="font-title w-5/6 text-4xl">{headlineText}</h1>
+              <h1 className="font-title text-2xl font-semibold">
+                {headlineText}
+              </h1>
             </div>
           )}
           <figure>
@@ -70,7 +74,7 @@ const ProfileCard = ({ variant = "compact", headlineText = "" }) => {
               height={elementAttributes[variant].avatarSize}
               style={{ objectFit: "contain" }}
               priority
-              className="justify-self-end"
+              className={` ${variant === "headline" ? "justify-self-center" : "justify-self-end"}`}
             />
           </figure>
 
@@ -90,10 +94,10 @@ const ProfileCard = ({ variant = "compact", headlineText = "" }) => {
                   Hey, I&apos;m
                 </span>
                 <br />
-                Mathew R
+                {portfolio.name}
               </h1>
               <span className="text-sm font-semibold uppercase">
-                Web Developer
+                {portfolio.role}
               </span>
             </div>
           ) : null}
@@ -105,8 +109,10 @@ const ProfileCard = ({ variant = "compact", headlineText = "" }) => {
         <aside>
           <div className="flex w-full flex-row items-center justify-between px-4 py-2 text-sm font-light">
             <Link
-              href={"/"}
+              href={portfolio.social.github}
               className="flex items-center gap-x-2 hover:font-normal"
+              target="_blank"
+              rel="noopener noreferrer"
             >
               <GithubFilled style={{ fontSize: "16px" }} />
               Matthew110703
@@ -114,6 +120,8 @@ const ProfileCard = ({ variant = "compact", headlineText = "" }) => {
             <Link
               href={"/"}
               className="flex items-center gap-x-2 hover:font-normal"
+              target="_blank"
+              rel="noopener noreferrer"
             >
               <DownloadOutlined style={{ fontSize: "16px" }} />
               My Resume
@@ -123,11 +131,6 @@ const ProfileCard = ({ variant = "compact", headlineText = "" }) => {
       )}
     </div>
   );
-};
-
-ProfileCard.propTypes = {
-  variant: PropTypes.oneOf(["compact", "minimal", "headline"]),
-  headlineText: PropTypes.string,
 };
 
 export default ProfileCard;

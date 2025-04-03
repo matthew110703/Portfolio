@@ -1,0 +1,235 @@
+{
+  "name": "Mathew R",
+  "role": "Software Developer",
+  "location": "Bangalore, India",
+  "email": "macmatthew724@gmail.com",
+  "about": "Passionate software developer with a knack for problem-solving and a love for coding. I thrive in collaborative environments and enjoy tackling complex challenges. My goal is to create innovative solutions that make a positive impact.",
+  "summary": [
+    "Aspiring Web Developer with hands-on experience in building web applications and RESTful APIs using modern technologies. Recent graduate with a strong foundation in software development, gained through academic projects and personal initiatives. Passionate about coding, problem-solving, and continuous learning. Skilled in front-end and back-end technologies, with a focus on performance optimization and scalable solutions.",
+    "Driven by curiosity and a love for problem-solving, I thrive in building scalable and efficient solutions, from responsive web interfaces to API integrations. As a developer, I place a strong emphasis on code quality, collaboration, and continuous learning to keep up with evolving industry standards. Whether it's crafting innovative user experiences or optimizing server-side logic, I take pride in delivering projects that meet both technical and business goals.",
+    "Recognized for creativity, innovation, and adaptability in fast-paced environments. I'm always eager to contribute to impactful projects and explore new opportunities to grow as a developer. Let's build something amazing together!"
+  ],
+  "quote": {
+    "text": "Let me take you into a deeper experience, make a moment a lasting conveyable memory. Let me help build your tribe.",
+    "author": "Deep Immersion"
+  },
+  "core_skills": [
+    "React.js",
+    "Node.js",
+    "MongoDB",
+    "Python",
+    "Problem-Solving"
+  ],
+  "experience": [
+    {
+      "id": 1,
+      "title": "Full Stack Developer Intern",
+      "company": {
+        "name": "Unified Mentor Pvt. Ltd.",
+        "url": "https://www.unifiedmentor.com/",
+        "location": "Bangalore, India"
+      },
+      "from": "Sep 2024",
+      "to": "Dec 2024",
+      "description": "Developed robust web applications and restful APIs, focusing on interactive user interfaces and scalable backend solutions. gained in-depth knowledge of web development best practices, including clean coding standards and performance optimization. My responsibilities included translating requirements into functional web applications, ensuring timely delivery, and implementing end-to-end development of key features. this experience provided hands-on exposure to the entire software development lifecycle (SDLC), strengthening problem-solving skills and adaptability. Excited to leverage this experience to contribute effectively to innovative development teams and further enhance my career in web development. ",
+      "technologies": [
+        "React.js",
+        "Node.js",
+        "MongoDB",
+        "Express.js",
+        "RESTful APIs",
+        "Redux",
+        "Tailwind CSS"
+      ]
+    },
+    {
+      "id": 2,
+      "title": "Data Annotator Intern",
+      "company": {
+        "name": "Samsung Seed Labs R&D India",
+        "url": "https://www.samsung.com/in/aboutsamsung/samsung-seed-labs/",
+        "location": "Bangalore, India"
+      },
+      "from": "Oct 2023",
+      "to": "Nov 2023",
+      "description": "Assisted in labeling, classifying, collecting, and recording data for training AI models. Responsible for executing assigned tasks, including data annotation, categorization, and voice recording, in compliance with project requirements and quality standards. Gained valuable experience working in a structured environment, enhancing attention to detail, adaptability, and teamwork. This experience strengthened my ability to adjust to diverse work environments and collaborate effectively within an organization.",
+      "technologies": [
+        "MS-Excel",
+        "Classification",
+        "Data Collection",
+        "Voice Recording",
+        "Labeling",
+        "Categorization",
+        "Data Management"
+      ]
+    }
+  ],
+  "education": [
+    {
+      "id": 1,
+      "degree": "Bachelor of Computer Applications",
+      "institution": {
+        "name": "Cambridge Institute of Technology",
+        "url": "https://www.cambridge.edu.in/",
+        "location": "Bangalore, India"
+      },
+      "from": "2021",
+      "to": "2024",
+      "description": "A strong foundation in computer science, programming, and software development. Proficiency in various programming languages and database management.",
+      "technologies": [
+        "C, C#",
+        "Java",
+        "Python",
+        "Web Development",
+        "Data Structures",
+        "Algorithms",
+        "Database Management",
+        "Computer Networks",
+        "Operating Systems",
+        "Computer Hardware"
+      ]
+    },
+    {
+      "id": 2,
+      "degree": "Pre University (XI & XII)",
+      "institution": {
+        "name": "Charan's PU College",
+        "url": "https://www.charanspu.com/",
+        "location": "Bangalore, India"
+      },
+      "from": "2021",
+      "to": "2024",
+      "description": "Completed Pre-University education with a focus on Computer Science and Commerce. Developed a strong analytical mindset and problem-solving skills through coursework in Computer Science, Economics, Business and Accounting.",
+      "technologies": [
+        "Computer Science",
+        "Economics",
+        "Business Studies",
+        "Accountancy",
+        "English"
+      ]
+    }
+  ],
+  "skills": {
+    "programming_languages": [
+      { "label": "Javascript", "icon": "/tech/javascript.png" },
+      { "label": "Python", "icon": "/tech/python.png" }
+    ],
+    "frontend": [
+      { "label": "HTML", "icon": "/tech/html.png" },
+      { "label": "CSS", "icon": "/tech/css_.png" },
+      { "label": "React.js", "icon": "/tech/react.png" },
+      { "label": "Redux", "icon": "/tech/redux.png" },
+      { "label": "Tailwind CSS", "icon": "/tech/tailwind.png" },
+      { "label": "Material UI", "icon": "/tech/mui.png" },
+      { "label": "Bootstrap", "icon": "/tech/bootstrap.png" },
+      { "label": "Motion", "icon": "/tech/motion.png" }
+    ],
+    "backend": [
+      { "label": "Node.js", "icon": "/tech/node.png" },
+      { "label": "Express.js", "icon": "/tech/express.png" },
+      { "label": "Django", "icon": "/tech/django.png" },
+      { "label": "MongoDB", "icon": "/tech/mongo.png" },
+      { "label": "Firebase", "icon": "/tech/firebase.png" },
+      { "label": "Supabase", "icon": "/tech/supabase.png" }
+    ],
+    "tools": [
+      { "label": "Git", "icon": "/tech/git.png" },
+      { "label": "Postman", "icon": "/tech/postman_.png" },
+      { "label": "Figma", "icon": "/tech/figma.png" },
+      { "label": "VS Code", "icon": "/tech/vscode.png" },
+      { "label": "Canva", "icon": "/tech/canva.png" }
+    ]
+  },
+  "social": {
+    "github": "https://github.com/matthew110703",
+    "linkedin": "https://www.linkedin.com/in/matthew110703/",
+    "twitter": "https://twitter.com"
+  },
+
+  "projects": [
+    {
+      "id": 1,
+      "title": "Artificial Intelligence Hub",
+      "description": "The AI Hub is a groundbreaking platform designed to provide users with cutting-edge AI-powered tools for communication and content creation. It features seamless integration, user-friendly design, and advanced functionalities such as chatbots, email composition, text-to-speech, and image generation, all accessible through a modern and responsive interface.",
+      "technologies": [
+        "React.js",
+        "Node.js",
+        "Express.js",
+        "MongoDB",
+        "Tailwind CSS",
+        "Redux",
+        "Json Web Token (JWT)",
+        "Socket.io"
+      ],
+      "source": "https://github.com/matthew110703/artificial-intelligence-hub.git",
+      "live": "https://artificial-intelligence-hub.vercel.app/",
+      "thumbnail": "/projects/ai_hub.webp"
+    },
+    {
+      "id": 2,
+      "title": "Clinic Management System",
+      "description": "The Clinic Management System is a comprehensive software solution designed to enhance communication between doctors and receptionists in a clinical environment. It streamlines patient management, token generation, billing, and record-keeping processes to ensure efficient operations and improved patient care.",
+      "technologies": [
+        "React.js",
+        "Node.js",
+        "Express.js",
+        "MongoDB",
+        "Tailwind CSS",
+        "Material UI",
+        "Redux"
+      ],
+      "source": "https://github.com/matthew110703/Clinic-Management-System.git",
+      "live": "https://clinic-management-system-sand.vercel.app/",
+      "thumbnail": "/projects/cms.png"
+    },
+    {
+      "id": 3,
+      "title": "Eventify",
+      "description": "The Event Management App is designed to help users manage and organize events efficiently. This application includes features for both the client-side and server-side, providing a comprehensive solution for event management. Users can create, manage, and track events seamlessly. The app is built with a focus on user experience and performance, ensuring that users can easily navigate through the platform.",
+      "technologies": [
+        "React.js",
+        "Node.js",
+        "Express.js",
+        "MongoDB",
+        "Tailwind CSS",
+        "Redux"
+      ],
+      "source": "https://github.com/matthew110703/Event-Management-App.git",
+      "live": "https://event-management-app-silk-zeta.vercel.app/",
+      "thumbnail": "/projects/eventify.jpg"
+    },
+    {
+      "id": 4,
+      "title": "Real Estate Listing App (UK)",
+      "description": "The Real Estate Listing App is a comprehensive platform that lists UK real estate properties. The app offers users an intuitive interface to explore property listings, view detailed property information, and connect with property owners and agents. Whether you are a home buyer, seller, or real estate agent, this app provides all the tools you need to manage your real estate connections efficiently.",
+      "technologies": [
+        "React.js",
+        "Tailwind CSS",
+        "RapidAPI",
+        "Redux",
+        "Firebase"
+      ],
+      "source": "https://github.com/matthew110703/Real-Estate-listing-app.git",
+      "live": "https://real-estate-listing-app-psi.vercel.app/",
+      "thumbnail": "/projects/real_estate.png"
+    },
+    {
+      "id": 5,
+      "title": "Architectura",
+      "description": " A Beautiful and responsive webpage designed using React.js and Tailwind CSS. Styling of elements is followed in Mobile first approach principle.",
+      "technologies": ["JavaScript", "React.js", "Tailwind CSS"],
+      "source": "https://github.com/matthew110703/architectura.git",
+      "live": "https://architectura.vercel.app/",
+      "thumbnail": "/projects/architectura.png"
+    },
+    {
+      "id": 6,
+      "title": "Foodies",
+      "description": "Welcome to Foodies, a recipe-sharing platform that connects food enthusiasts from around the world. Discover new recipes, share your culinary creations, and explore a vibrant community of food lovers.",
+      "technologies": ["JavaScript", "Next.js", "Sqlite"],
+      "source": "https://github.com/matthew110703/foodies.git",
+      "live": "https://foodies-two-omega.vercel.app/",
+      "thumbnail": "/projects/foodies.png"
+    }
+  ]
+}

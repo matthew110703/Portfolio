@@ -4,7 +4,7 @@ import { navigationLinks } from "@/lib/constants";
 
 const BottomNavigation = () => {
   return (
-    <div className="bg-shadow fixed bottom-2 w-full rounded-3xl p-4 lg:hidden">
+    <div className="bg-shadow fixed bottom-2 left-1/2 mx-auto max-w-full min-w-sm -translate-x-1/2 rounded-3xl p-4 sm:w-full lg:hidden">
       <nav>
         <ul className="flex list-none justify-around">
           {navigationLinks.map((nav, idx) => {

@@ -34,21 +34,3 @@ export const navigationLinks = [
     href: "/contact",
   },
 ];
-
-// // Card Actions
-// import { OpenInNewOutlined } from "@mui/icons-material";
-// import { Icon } from "@/components";
-// export const cardActions = {
-//   cms: [
-//     {
-//       label: "Live Demo",
-//       icon: <OpenInNewOutlined fontSize="small" />,
-//       href: "/",
-//     },
-//     {
-//       label: "Live Demo",
-//       icon: <Icon src={"/icons/github.svg"} size={16} />,
-//       href: "/",
-//     },
-//   ],
-// };

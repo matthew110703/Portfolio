@@ -9,7 +9,7 @@ const ContactLink = ({ text, icon, href, className }) => {
       target="_blank"
       rel="noopener noreferrer"
     >
-      {icon}
+      <span className="text-lg">{icon}</span>
       <span>{text}</span>
     </Link>
   );

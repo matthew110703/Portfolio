@@ -6,10 +6,10 @@ import BottomNavigation from "./BottomNavigation";
 
 const Container = ({ children }) => {
   return (
-    <main className="grid h-screen place-items-center">
-      <div className="flex max-h-full w-full max-w-7xl flex-col rounded-3xl bg-black p-4 md:h-[720px] md:max-h-[720px] lg:flex-row">
-        <SideBar className={"place-self-center"} />
-        {children}
+    <main className="flex min-h-screen w-full items-center justify-center overflow-hidden p-4">
+      <div className="mx-auto mb-[80px] flex w-full max-w-[1280px] flex-col gap-4 rounded-3xl bg-black sm:h-full sm:p-4 md:max-h-[900px] md:min-h-[720px] md:flex-row lg:mb-0">
+        <SideBar className="place-self-center" />
+        <div className="flex-1 overflow-auto">{children}</div>
         <BottomNavigation />
       </div>
     </main>

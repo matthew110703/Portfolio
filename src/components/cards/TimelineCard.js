@@ -1,46 +1,27 @@
 // UI
 import { Tag } from "../ui";
 
-/**
- * @name TimelineCard
- * @param {Object} props - Props for the TimelineCard component
- * @param {Node} props.children - Summary of the timeline card content (paragraphs)
- * @param {string} props.from - Start date of the timeline card
- * @param {string} props.to - End date of the timeline card
- * @param {string} props.title - Title of the timeline card
- * @param {string} props.subTitle - Subtitle of the timeline card
- * @param {string[]} [props.tags = []] - List of tags for the timeline card
- * @param {string} [props.link = "#"] - Link to the timeline card source
- */
-const TimelineCard = ({
-  children,
-  from,
-  to,
-  title,
-  org,
-  tags = [],
-  link = "https://example.com",
-}) => {
+const TimelineCard = ({ children, from, to, title, org, tags = [] }) => {
   return (
-    <article className="w-full items-start gap-x-12 px-4 py-2 sm:flex">
-      <time className="font-main text-sm font-light text-nowrap text-gray-400">
+    <article className="w-full items-start gap-x-4 px-4 py-2 lg:flex">
+      <time className="font-main min-w-[25%] text-sm font-light text-nowrap text-gray-400">
         {from} - {to}
       </time>
       <section className="space-y-2">
         <header>
           <h3 className="text-base font-bold">{title}</h3>
           <a
-            className="hover:text-primary text-sm font-semibold text-gray-500 after:ml-1 after:align-top hover:after:content-['↗']"
-            href={link}
+            className="hover:text-primary text-sm font-semibold text-gray-500 after:ml-1 after:align-baseline after:content-['↗'] hover:after:ml-2.5 hover:after:align-top"
+            href={org.url}
             target="_blank"
             rel="noreferrer"
           >
-            {org}
+            {org.name}
           </a>
         </header>
         <p className="font-body text-sm font-light">{children}</p>
         <footer>
-          <ul className="flex flex-wrap gap-x-2">
+          <ul className="flex flex-wrap gap-2">
             {tags.map((tag) => (
               <Tag key={tag} title={tag} />
             ))}
