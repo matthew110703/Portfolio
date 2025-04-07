@@ -2,8 +2,11 @@
 import { useState } from "react";
 
 // UI
-import { Input } from "@/components/ui";
+import { Input, Icon } from "@/components/ui";
 import { SubmitButton } from "@/components/buttons";
+
+// Icons
+import { MailOutlined, UserOutlined } from "@ant-design/icons";
 
 // handle Form
 import handleContactForm from "@/lib/handleContactForm";
@@ -50,6 +53,7 @@ const ContactForm = () => {
         placeHolder="John Doe"
         required
         autoComplete="off"
+        inputAdornment={<UserOutlined />}
       />
       <Input
         name="email"
@@ -58,6 +62,7 @@ const ContactForm = () => {
         placeHolder="example@gmail.com"
         required
         autoComplete="off"
+        inputAdornment={<MailOutlined />}
       />
       <textarea
         name="message"

@@ -19,12 +19,15 @@ const Skills = () => {
       >
         <Image
           src={"/icons/skill.png"}
-          alt="skill-icon"
           width={128}
           height={128}
-          className=""
+          alt="skill-icon"
+          loading="lazy"
+          unoptimized
         />
-        <h4 className="text-lg font-semibold">My Skills</h4>
+        <h2 className="text-shadow font-main text-lg font-semibold">
+          My Skills
+        </h2>
       </div>
 
       {show && (

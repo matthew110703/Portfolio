@@ -11,7 +11,7 @@ const TimelineCard = ({ children, from, to, title, org, tags = [] }) => {
         <header>
           <h3 className="text-base font-bold">{title}</h3>
           <a
-            className="hover:text-primary text-sm font-semibold text-gray-500 after:ml-1 after:align-baseline after:content-['↗'] hover:after:ml-2.5 hover:after:align-top"
+            className="hover:text-primary text-sm font-semibold text-gray-400 after:ml-1 after:align-baseline after:content-['↗'] hover:after:ml-2.5 hover:after:align-top"
             href={org.url}
             target="_blank"
             rel="noreferrer"
@@ -23,7 +23,9 @@ const TimelineCard = ({ children, from, to, title, org, tags = [] }) => {
         <footer>
           <ul className="flex flex-wrap gap-2">
             {tags.map((tag) => (
-              <Tag key={tag} title={tag} />
+              <li key={tag}>
+                <Tag title={tag} />
+              </li>
             ))}
           </ul>
         </footer>

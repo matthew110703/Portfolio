@@ -1,8 +1,3 @@
-import React from "react";
-
-// Next imports
-import Image from "next/image";
-
 // UI
 import Skills from "./Skills";
 

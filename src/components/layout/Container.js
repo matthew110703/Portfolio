@@ -1,5 +1,3 @@
-import React from "react";
-
 // UI components
 import SideBar from "./SideBar";
 import BottomNavigation from "./BottomNavigation";

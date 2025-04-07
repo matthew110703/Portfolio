@@ -37,6 +37,7 @@ const ProjectCard = ({
         width={400}
         height={300}
         className={`h-full w-full rounded-3xl object-cover ${imageAspect === "video" ? "aspect-video" : "aspect-square"}`}
+        priority={true}
       />
 
       {/* Details */}
@@ -45,7 +46,7 @@ const ProjectCard = ({
           <ContactLink
             text={title}
             href={live}
-            className={"text-xl font-bold"}
+            className={"font-main text-xl font-bold"}
           />
           <p className="text-sm">{description}</p>
           <div className="flex flex-wrap gap-2 p-2">

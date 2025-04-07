@@ -1,7 +1,6 @@
 // UI
-import { SubmitButton } from "@/components/buttons";
 import { ProfileCard, TitleCard } from "@/components/cards";
-import { ContactOverview, Heading, Input } from "@/components/ui";
+import { ContactOverview, Heading } from "@/components/ui";
 
 // Form
 import ContactForm from "@/components/forms/ContactForm";

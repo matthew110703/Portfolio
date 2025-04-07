@@ -1,9 +1,7 @@
-import React from "react";
-
 const TimelineHeader = ({ title = "" }) => {
   return (
     <header className="flex w-full items-center gap-x-2">
-      <h2 className="text-primary text-2xl font-semibold">{title}</h2>
+      <h2 className="text-primary font-main text-2xl font-semibold">{title}</h2>
       <svg className="h-[2px] w-full">
         <line
           x1="0"

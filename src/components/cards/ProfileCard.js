@@ -1,6 +1,3 @@
-import PropTypes from "prop-types";
-import React from "react";
-
 // Next imports
 import Image from "next/image";
 import Link from "next/link";
@@ -44,7 +41,7 @@ const ProfileCard = ({ variant = "compact", headlineText = "" }) => {
             href={"/about"}
             className="text-primary flex h-[60px] w-1/2 flex-row items-center justify-evenly rounded-ee-3xl bg-black"
           >
-            <figure>
+            <figure className="h-8 w-8">
               <Icon src={"/icons/react.svg"} size={32} />
             </figure>
 
@@ -74,7 +71,8 @@ const ProfileCard = ({ variant = "compact", headlineText = "" }) => {
               height={elementAttributes[variant].avatarSize}
               style={{ objectFit: "contain" }}
               priority
-              className={` ${variant === "headline" ? "justify-self-center" : "justify-self-end"}`}
+              className={`border-shadow rounded-full border-4 ${variant === "headline" ? "justify-self-center" : "justify-self-end"}`}
+              loading="eager"
             />
           </figure>
 

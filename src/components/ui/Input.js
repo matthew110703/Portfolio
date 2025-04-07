@@ -4,10 +4,16 @@ const Input = ({
   label,
   placeHolder,
   required = false,
+  inputAdornment = null,
   ...rest
 }) => {
   return (
-    <div className="border-primary/50 focus-within:border-primary/100 relative my-2 border-b">
+    <div className="border-primary/50 focus-within:border-primary/100 relative my-2 flex flex-row items-center border-b">
+      {inputAdornment && (
+        <span className="text-primary px-2" title={label}>
+          {inputAdornment}
+        </span>
+      )}
       <input
         type={type}
         name={name}
