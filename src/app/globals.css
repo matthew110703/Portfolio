@@ -29,6 +29,7 @@ html,
 body {
   font-family: "Montserrat", sans-serif;
   color: white;
+  overflow-x: hidden;
   @apply bg-black md:bg-shadow;
 }
 

@@ -7,47 +7,64 @@ import Icon from "./Icon";
 
 import portfolio from "@/lib/portfolio.json";
 
+// Motion
+import * as motion from "motion/react-client";
+import { AnimatePresence } from "motion/react";
+import { fadeIn, skillsAnimation, slideInFromRight } from "@/lib/motion";
+
 const Skills = () => {
   const [show, setShow] = useState(false);
 
   return (
     <>
-      <div
+      <motion.div
         role="button"
-        className="bg-primary flex h-full w-1/2 flex-col items-center justify-center rounded-3xl"
+        className="bg-primary static flex h-full w-1/2 flex-col items-center justify-center rounded-3xl"
         onClick={() => setShow(!show)}
+        variants={skillsAnimation}
+        {...skillsAnimation}
       >
         <Image
           src={"/icons/skill.png"}
           width={128}
           height={128}
           alt="skill-icon"
-          loading="lazy"
-          unoptimized
+          priority
+          className="transition-all duration-300 hover:scale-105"
         />
-        <h2 className="text-shadow font-main text-lg font-semibold">
+        <h2
+          className="text- font-main text-lg font-semibold drop-shadow-2xl"
+          style={{ textShadow: "0 0 3px #000" }}
+        >
           My Skills
         </h2>
-      </div>
+      </motion.div>
 
-      {show && (
-        <>
-          <div
-            className="absolute inset-0 z-10 flex h-screen w-screen flex-col items-center justify-center bg-black/50"
-            onClick={() => setShow(false)}
-          >
-            <div className="bg-shadow border-primary shadow-primary flex flex-col gap-4 rounded-3xl border p-4 shadow-md">
-              <Skill
-                heading={"Programming Languages"}
-                skills={portfolio.skills.programming_languages}
-              />
-              <Skill heading={"Frontend"} skills={portfolio.skills.frontend} />
-              <Skill heading={"Backend"} skills={portfolio.skills.backend} />
-              <Skill heading={"Tools"} skills={portfolio.skills.tools} />
-            </div>
-          </div>
-        </>
-      )}
+      <AnimatePresence>
+        {show && (
+          <>
+            <motion.div
+              className="fixed inset-0 z-[999] flex h-screen w-screen flex-col items-center justify-center bg-black/50"
+              onClick={() => setShow(false)}
+              variants={fadeIn}
+              {...fadeIn}
+            >
+              <div className="bg-shadow border-primary shadow-primary flex flex-col gap-4 rounded-3xl border p-4 shadow-md">
+                <Skill
+                  heading={"Programming Languages"}
+                  skills={portfolio.skills.programming_languages}
+                />
+                <Skill
+                  heading={"Frontend"}
+                  skills={portfolio.skills.frontend}
+                />
+                <Skill heading={"Backend"} skills={portfolio.skills.backend} />
+                <Skill heading={"Tools"} skills={portfolio.skills.tools} />
+              </div>
+            </motion.div>
+          </>
+        )}
+      </AnimatePresence>
     </>
   );
 };

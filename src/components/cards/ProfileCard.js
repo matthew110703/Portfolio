@@ -8,7 +8,12 @@ import { Icon } from "../ui";
 // Icons
 import { GithubFilled, DownloadOutlined } from "@ant-design/icons";
 
+// Data
 import portfolio from "@/lib/portfolio.json";
+
+// Motion
+import * as motion from "motion/react-client";
+import { slideInFromTop, slideInFromRight } from "@/lib/motion";
 
 const ProfileCard = ({ variant = "compact", headlineText = "" }) => {
   const variantStyles = {
@@ -31,18 +36,24 @@ const ProfileCard = ({ variant = "compact", headlineText = "" }) => {
   };
 
   return (
-    <div
+    <motion.div
+      variants={variant !== "minimal" ? slideInFromTop : slideInFromRight}
+      initial="initial"
+      animate="animate"
+      exit="exit"
       className={`bg-primary text-shadow flex min-w-full flex-col justify-between rounded-3xl transition-all md:min-w-[400px] ${variantStyles[variant]} ${variant === "headline" ? "hidden lg:flex" : ""}`}
     >
       {/* Sub-Heading Section  */}
       {variant === "compact" && (
-        <section id="sub-head">
+        <section id="about">
           <Link
             href={"/about"}
-            className="text-primary flex h-[60px] w-1/2 flex-row items-center justify-evenly rounded-ee-3xl bg-black"
+            className="text-primary border-primary flex h-[60px] w-1/2 flex-row items-center justify-evenly rounded-ee-3xl bg-black transition-all duration-200 ease-in-out hover:border-2 hover:shadow-md"
+            title="Click to know more about me"
+            aria-label="About Me"
           >
             <figure className="h-8 w-8">
-              <Icon src={"/icons/react.svg"} size={32} />
+              <Icon src={"/icons/react.svg"} size={32} spin alt="ReactJS" />
             </figure>
 
             <p className="font-main text-2xl font-light">About Me</p>
@@ -57,13 +68,11 @@ const ProfileCard = ({ variant = "compact", headlineText = "" }) => {
         >
           {/* Headline  */}
           {variant === "headline" && (
-            <div>
-              <h1 className="font-title text-2xl font-semibold">
-                {headlineText}
-              </h1>
-            </div>
+            <h1 className="font-title text-2xl font-semibold">
+              {headlineText}
+            </h1>
           )}
-          <figure>
+          <motion.figure whileHover={{ scale: 1.05 }}>
             <Image
               src={"/avatar.png"}
               alt="avatar"
@@ -73,8 +82,10 @@ const ProfileCard = ({ variant = "compact", headlineText = "" }) => {
               priority
               className={`border-shadow rounded-full border-4 ${variant === "headline" ? "justify-self-center" : "justify-self-end"}`}
               loading="eager"
+              title="Hello, Stranger!"
+              aria-label="Hello, Stranger!"
             />
-          </figure>
+          </motion.figure>
 
           {/* Name  */}
           {variant === "compact" || variant === "minimal" ? (
@@ -111,6 +122,8 @@ const ProfileCard = ({ variant = "compact", headlineText = "" }) => {
               className="flex items-center gap-x-2 hover:font-normal"
               target="_blank"
               rel="noopener noreferrer"
+              title="Github Profile"
+              aria-label="Github Profile"
             >
               <GithubFilled style={{ fontSize: "16px" }} />
               Matthew110703
@@ -120,6 +133,9 @@ const ProfileCard = ({ variant = "compact", headlineText = "" }) => {
               className="flex items-center gap-x-2 hover:font-normal"
               target="_blank"
               rel="noopener noreferrer"
+              title="Download Resume/CV"
+              aria-label="Download Resume/CV"
+              download={true}
             >
               <DownloadOutlined style={{ fontSize: "16px" }} />
               My Resume
@@ -127,7 +143,7 @@ const ProfileCard = ({ variant = "compact", headlineText = "" }) => {
           </div>
         </aside>
       )}
-    </div>
+    </motion.div>
   );
 };
 

@@ -12,9 +12,20 @@ import {
 
 import portfolio from "@/lib/portfolio.json";
 
+// Motion
+import * as motion from "motion/react-client";
+import { slideInFromBottom } from "@/lib/motion";
+
 const ContactOverview = ({ className }) => {
   return (
-    <div className={`flex flex-col items-center gap-4 ${className}`}>
+    <motion.div
+      variants={slideInFromBottom}
+      initial="initial"
+      whileInView={"animate"}
+      exit="exit"
+      viewport={{ once: true }}
+      className={`flex flex-col items-center gap-4 ${className}`}
+    >
       <ContactLink icon={<MailFilled />} text={portfolio.email} />
       <ContactLink
         icon={<Icon src={"/icons/pin.svg"} alt="pin" size={24} />}
@@ -38,7 +49,7 @@ const ContactOverview = ({ className }) => {
           text={"Twitter"}
         />
       </div>
-    </div>
+    </motion.div>
   );
 };
 

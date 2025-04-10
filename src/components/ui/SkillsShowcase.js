@@ -4,12 +4,22 @@ import Skills from "./Skills";
 // Portfolio
 import portfolio from "@/lib/portfolio.json";
 
+// Motion
+import * as motion from "motion/react-client";
+import { slideInFromRight } from "@/lib/motion";
+
 const SkillsShowcase = ({ className }) => {
   return (
-    <div
-      className={`bg-shadow flex h-[200px] min-h-[150px] w-full max-w-full items-center justify-center rounded-3xl ${className}`}
+    <motion.div
+      variants={slideInFromRight}
+      {...slideInFromRight}
+      transition={{
+        when: "beforeChildren",
+        delayChildren: 0.3,
+      }}
+      className={`bg-shadow relative flex h-[200px] min-h-[150px] w-full max-w-full items-center justify-start rounded-3xl ${className}`}
     >
-      <aside className="mx-auto">
+      <aside className="flex w-1/2 justify-center">
         <ul className="*:text-primary list-inside list-disc space-y-2 *:text-xs *:font-semibold">
           {portfolio.core_skills.map((skill, index) => (
             <li key={index}>{skill}</li>
@@ -18,7 +28,7 @@ const SkillsShowcase = ({ className }) => {
       </aside>
 
       <Skills />
-    </div>
+    </motion.div>
   );
 };
 

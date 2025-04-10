@@ -1,9 +1,21 @@
 // UI
 import { Tag } from "../ui";
 
+// Motion
+import * as motion from "motion/react-client";
+import { slideInFromLeft } from "@/lib/motion";
+
 const TimelineCard = ({ children, from, to, title, org, tags = [] }) => {
   return (
-    <article className="w-full items-start gap-x-4 px-4 py-2 lg:flex">
+    <motion.article
+      variants={slideInFromLeft}
+      initial="initial"
+      whileInView="animate"
+      exit="exit"
+      viewport={{ once: true }}
+      transition={{ delay: 0.3 }}
+      className="w-full items-start gap-x-4 px-4 py-2 lg:flex"
+    >
       <time className="font-main min-w-[25%] text-sm font-light text-nowrap text-gray-400">
         {from} - {to}
       </time>
@@ -30,7 +42,7 @@ const TimelineCard = ({ children, from, to, title, org, tags = [] }) => {
           </ul>
         </footer>
       </section>
-    </article>
+    </motion.article>
   );
 };
 

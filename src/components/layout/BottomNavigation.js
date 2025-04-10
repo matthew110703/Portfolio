@@ -2,9 +2,17 @@
 import IconButton from "../buttons/IconButton";
 import { navigationLinks } from "@/lib/constants";
 
+// Motion
+import * as motion from "motion/react-client";
+import { slideInFromBottom } from "@/lib/motion";
+
 const BottomNavigation = () => {
   return (
-    <div className="bg-shadow fixed bottom-2 left-1/2 mx-auto max-w-full min-w-sm -translate-x-1/2 rounded-3xl p-4 sm:w-full lg:hidden">
+    <motion.div
+      variants={slideInFromBottom}
+      {...slideInFromBottom}
+      className="bg-shadow fixed bottom-2 left-1/2 mx-auto max-w-full min-w-sm -translate-x-1/2 rounded-3xl p-4 sm:w-full lg:hidden"
+    >
       <nav>
         <ul className="flex list-none justify-around">
           {navigationLinks.map((nav, idx) => {
@@ -21,7 +29,7 @@ const BottomNavigation = () => {
           })}
         </ul>
       </nav>
-    </div>
+    </motion.div>
   );
 };
 

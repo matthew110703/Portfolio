@@ -5,6 +5,10 @@ import { ContactOverview, Heading } from "@/components/ui";
 // Form
 import ContactForm from "@/components/forms/ContactForm";
 
+// Motion
+import * as motion from "motion/react-client";
+import { slideInFromLeft } from "@/lib/motion";
+
 const Contact = () => {
   return (
     <section
@@ -18,7 +22,11 @@ const Contact = () => {
 
       <div className="m-auto flex flex-col items-center gap-8 p-4 md:flex-row md:items-start md:p-8">
         {/* Get In Touch */}
-        <section className="basis-1/2 space-y-4">
+        <motion.section
+          variants={slideInFromLeft}
+          {...slideInFromLeft}
+          className="basis-1/2 space-y-4"
+        >
           <header className="space-y-4">
             <Heading text="Get in Touch" />
             <p className="text-sm lg:w-5/6">
@@ -29,11 +37,17 @@ const Contact = () => {
 
           {/* Contact Form */}
           <ContactForm />
-        </section>
+        </motion.section>
         <br />
         {/* Connect With Me */}
         <section className="basis-1/2 space-y-4">
-          <header className="space-y-4">
+          <motion.header
+            variants={slideInFromLeft}
+            initial="initial"
+            whileInView={"animate"}
+            viewport={{ once: true }}
+            className="space-y-4"
+          >
             <Heading text="Connect with Me" />
             <p className="text-base font-semibold">
               Let&apos;s Create Something Amazing
@@ -44,7 +58,7 @@ const Contact = () => {
               developer/designer who values innovation, performance, and user
               experience, let’s connect and make something great together.
             </p>
-          </header>
+          </motion.header>
           <ContactOverview className={"lg:items-start"} />
         </section>
       </div>

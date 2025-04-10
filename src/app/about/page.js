@@ -8,6 +8,10 @@ import { TitleCard, ProfileCard, TimelineCard } from "@/components/cards";
 
 import portfolio from "@/lib/portfolio.json";
 
+// Motion
+import * as motion from "motion/react-client";
+import { aboutContainer, aboutItem } from "@/lib/motion";
+
 const About = () => {
   return (
     <section aria-label="About" className="flex h-full w-full flex-col">
@@ -17,7 +21,7 @@ const About = () => {
 
       <div className="flex flex-col gap-4 overflow-hidden md:flex-row">
         {/* Profile */}
-        <div className="flex flex-col justify-evenly gap-4">
+        <div className="flex flex-col justify-evenly gap-4 overflow-x-hidden">
           <ProfileCard variant="minimal" />
           <SkillsShowcase />
           {/* Contact */}
@@ -32,19 +36,29 @@ const About = () => {
               className={"mx-auto mb-8 hidden md:block"}
             />
 
-            <div className="space-y-2">
+            <motion.div
+              variants={aboutContainer}
+              initial="hidden"
+              whileInView={"show"}
+              viewport={{ once: true }}
+              className="space-y-2"
+            >
               {portfolio.summary.map((para, index) => (
-                <p key={index} className="text-sm lg:text-base">
+                <motion.p
+                  variants={aboutItem}
+                  key={index}
+                  className="text-sm lg:text-base"
+                >
                   {para}
-                </p>
+                </motion.p>
               ))}
-              <q className="text-primary italic">
+              <motion.q variants={aboutItem} className="text-primary italic">
                 {portfolio.quote.text}
                 <cite className="float-end mt-2 text-sm text-gray-400">
                   — {portfolio.quote.author}
                 </cite>
-              </q>
-            </div>
+              </motion.q>
+            </motion.div>
 
             {/* Experience */}
             <section id="experience" className="my-8 space-y-4">

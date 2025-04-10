@@ -5,13 +5,24 @@ import Image from "next/image";
 // Icons
 import { ExportOutlined } from "@ant-design/icons";
 
+// Motion
+import * as motion from "motion/react-client";
+import { slideInFromRight, viewAllButtonAnimation } from "@/lib/motion";
+
 const ViewAllButton = ({ className }) => {
   return (
-    <div
-      className={`flex flex-col overflow-hidden rounded-3xl bg-white ${className}`}
+    <motion.div
+      variants={slideInFromRight}
+      {...slideInFromRight}
+      transition={{
+        when: "beforeChildren",
+        staggerChildren: 0.2,
+        delayChildren: 0.3,
+      }}
+      className={`relative flex flex-col overflow-hidden rounded-3xl bg-white p-4 lg:p-8 ${className}`}
     >
-      <div className="text-shadow flex flex-grow flex-col items-center justify-center gap-2">
-        <ul className="hidden text-center *:text-sm *:font-semibold lg:block">
+      <div className="text-shadow flex flex-grow flex-col items-center justify-start gap-2">
+        <ul className="hidden text-center *:text-sm *:font-semibold xl:block">
           <li>Eat</li>
           <li>Sleep</li>
           <li>Code</li>
@@ -25,18 +36,26 @@ const ViewAllButton = ({ className }) => {
           unoptimized
         />
       </div>
-      <Link
-        href={"/portfolio"}
-        className="bg-primary flex w-full justify-center gap-4 self-center justify-self-center rounded-3xl px-4 py-6"
+
+      <motion.div
+        variants={viewAllButtonAnimation}
+        {...viewAllButtonAnimation}
+        className="bg-primary bottom-0 left-0 w-full"
       >
-        <p className="text-shadow text-center text-lg font-semibold">
-          View All
-        </p>
-        <ExportOutlined
-          style={{ color: "var(--color-shadow)", fontSize: "24px" }}
-        />
-      </Link>
-    </div>
+        <Link
+          href={"/portfolio"}
+          className="flex w-full items-center justify-center gap-4 self-center justify-self-center rounded-3xl px-4 py-6"
+          title="View All Projects"
+        >
+          <p className="text-shadow hidden text-center text-lg font-semibold lg:block">
+            View All
+          </p>
+          <ExportOutlined
+            style={{ color: "var(--color-shadow)", fontSize: "24px" }}
+          />
+        </Link>
+      </motion.div>
+    </motion.div>
   );
 };
 

@@ -13,6 +13,10 @@ import {
 
 import portfolio from "@/lib/portfolio.json";
 
+// Motion
+import * as motion from "motion/react-client";
+import { slideInFromBottom } from "@/lib/motion";
+
 const Home = () => {
   return (
     <section aria-label="Home" className="h-full w-full space-y-4">
@@ -36,7 +40,11 @@ const Home = () => {
         </div>
       </div>
 
-      <section aria-label="About">
+      <motion.section
+        variants={slideInFromBottom}
+        {...slideInFromBottom}
+        aria-label="About"
+      >
         <div className="border-primary flex flex-col items-center gap-4 rounded-3xl border-2 p-4 lg:flex-row">
           <p className="basis-3/5 text-justify text-base">{portfolio.about}</p>
 
@@ -69,7 +77,7 @@ const Home = () => {
             </div>
           </div>
         </div>
-      </section>
+      </motion.section>
     </section>
   );
 };

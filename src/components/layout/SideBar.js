@@ -5,13 +5,19 @@ import Link from "next/link";
 import { Icon } from "../ui";
 import { NavLink } from "../buttons";
 
+// Motion
+import * as motion from "motion/react-client";
+import { slideInFromLeft } from "@/lib/motion";
+
 // Constants
 import { navigationLinks } from "@/lib/constants";
 
 const SideBar = ({ className }) => {
   return (
-    <div
+    <motion.div
       className={`bg-shadow inset-shadow-primary hidden h-full max-h-[720px] min-h-[600px] flex-col items-center justify-between rounded-3xl py-8 inset-shadow-sm lg:flex ${className}`}
+      variants={slideInFromLeft}
+      {...slideInFromLeft}
     >
       <Link href={"/"} title="GitHub Profile">
         <Icon src={"/icons/dev.png"} alt="dev" size={32} />
@@ -21,7 +27,7 @@ const SideBar = ({ className }) => {
           <NavLink key={link.label} href={link.href} text={link.label} />
         ))}
       </nav>
-    </div>
+    </motion.div>
   );
 };
 

@@ -5,7 +5,7 @@ const LinkButton = ({ text, href = "#", className, icon }) => {
     <Link
       href={href}
       role="button"
-      className={`text-shadow bg-primary flex items-center gap-x-1.5 rounded-3xl px-3 py-1 text-xs font-semibold md:text-sm ${className}`}
+      className={`text-shadow bg-primary flex items-center gap-x-1.5 rounded-3xl px-3 py-1 text-xs font-semibold transition-all ease-in-out hover:scale-105 active:scale-95 md:text-sm ${className}`}
       target="_blank"
       rel="noopener noreferrer"
       aria-label={text}
