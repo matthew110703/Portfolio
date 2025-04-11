@@ -68,7 +68,7 @@ export const skillsAnimation = {
     width: "50%",
   },
   transition: {
-    delay: 0.3,
+    delay: 0.5,
     duration: 0.3,
     ease: "easeInOut",
   },

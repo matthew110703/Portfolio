@@ -18,7 +18,7 @@ import { slideInFromBottom } from "@/lib/motion";
 
 const ContactOverview = ({ className }) => {
   return (
-    <motion.div
+    <motion.footer
       variants={slideInFromBottom}
       initial="initial"
       whileInView={"animate"}
@@ -28,7 +28,8 @@ const ContactOverview = ({ className }) => {
     >
       <ContactLink icon={<MailFilled />} text={portfolio.email} />
       <ContactLink
-        icon={<Icon src={"/icons/pin.svg"} alt="pin" size={24} />}
+        type={"location"}
+        icon={<Icon src={"/icons/pin.svg"} alt="Location" size={24} />}
         text={portfolio.location}
       />
 
@@ -49,7 +50,7 @@ const ContactOverview = ({ className }) => {
           text={"Twitter"}
         />
       </div>
-    </motion.div>
+    </motion.footer>
   );
 };
 

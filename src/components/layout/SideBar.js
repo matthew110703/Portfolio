@@ -20,7 +20,11 @@ const SideBar = ({ className }) => {
       {...slideInFromLeft}
     >
       <Link href={"/"} title="GitHub Profile">
-        <Icon src={"/icons/dev.png"} alt="dev" size={32} />
+        <Icon
+          src={"/icons/dev.png"}
+          alt="Matthew110703 - GitHub Profile"
+          size={32}
+        />
       </Link>
       <nav className="flex flex-col-reverse items-center gap-y-12 place-self-end">
         {navigationLinks.map((link) => (

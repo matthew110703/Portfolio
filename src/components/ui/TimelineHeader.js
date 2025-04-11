@@ -2,7 +2,7 @@
 import * as motion from "motion/react-client";
 import { fadeIn, wipeInFromLeft } from "@/lib/motion";
 
-const TimelineHeader = ({ title = "" }) => {
+const TimelineHeader = ({ title = "", id }) => {
   return (
     <motion.header
       variants={fadeIn}
@@ -10,7 +10,9 @@ const TimelineHeader = ({ title = "" }) => {
       transition={{ when: "beforeChildren" }}
       className="flex w-full items-center gap-x-2"
     >
-      <h2 className="text-primary font-main text-2xl font-semibold">{title}</h2>
+      <h2 id={id} className="text-primary font-main text-2xl font-semibold">
+        {title}
+      </h2>
       <motion.svg
         variants={wipeInFromLeft}
         initial="initial"

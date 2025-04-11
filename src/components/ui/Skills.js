@@ -28,13 +28,13 @@ const Skills = () => {
           src={"/icons/skill.png"}
           width={128}
           height={128}
-          alt="skill-icon"
+          alt="My Core Skills"
           priority
           className="transition-all duration-300 hover:scale-105"
         />
         <h2
           className="text- font-main text-lg font-semibold drop-shadow-2xl"
-          style={{ textShadow: "0 0 3px #000" }}
+          style={{ textShadow: "0 2px 10px #000" }}
         >
           My Skills
         </h2>

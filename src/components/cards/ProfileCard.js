@@ -74,14 +74,13 @@ const ProfileCard = ({ variant = "compact", headlineText = "" }) => {
           )}
           <motion.figure whileHover={{ scale: 1.05 }}>
             <Image
-              src={"/avatar.png"}
-              alt="avatar"
+              src={"/avatar.webp"}
+              alt="Avatar, Mathew R"
               width={elementAttributes[variant].avatarSize}
               height={elementAttributes[variant].avatarSize}
               style={{ objectFit: "contain" }}
               priority
               className={`border-shadow rounded-full border-4 ${variant === "headline" ? "justify-self-center" : "justify-self-end"}`}
-              loading="eager"
               title="Hello, Stranger!"
               aria-label="Hello, Stranger!"
             />

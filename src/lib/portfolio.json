@@ -13,13 +13,7 @@
     "text": "Let me take you into a deeper experience, make a moment a lasting conveyable memory. Let me help build your tribe.",
     "author": "Deep Immersion"
   },
-  "core_skills": [
-    "React.js",
-    "Node.js",
-    "MongoDB",
-    "Python",
-    "Problem-Solving"
-  ],
+  "core_skills": ["React.js", "Node.js", "Next.js", "Python", "SQL/NoSQL"],
   "experience": [
     {
       "id": 1,
@@ -180,7 +174,7 @@
       ],
       "source": "https://github.com/matthew110703/Clinic-Management-System.git",
       "live": "https://clinic-management-system-sand.vercel.app/",
-      "thumbnail": "/projects/cms.png"
+      "thumbnail": "/projects/cms.webp"
     },
     {
       "id": 3,
@@ -196,7 +190,7 @@
       ],
       "source": "https://github.com/matthew110703/Event-Management-App.git",
       "live": "https://event-management-app-silk-zeta.vercel.app/",
-      "thumbnail": "/projects/eventify.jpg"
+      "thumbnail": "/projects/eventify.webp"
     },
     {
       "id": 4,
@@ -211,7 +205,7 @@
       ],
       "source": "https://github.com/matthew110703/Real-Estate-listing-app.git",
       "live": "https://real-estate-listing-app-psi.vercel.app/",
-      "thumbnail": "/projects/real_estate.png"
+      "thumbnail": "/projects/real_estate.webp"
     },
     {
       "id": 5,
@@ -220,7 +214,7 @@
       "technologies": ["JavaScript", "React.js", "Tailwind CSS"],
       "source": "https://github.com/matthew110703/architectura.git",
       "live": "https://architectura.vercel.app/",
-      "thumbnail": "/projects/architectura.png"
+      "thumbnail": "/projects/architectura.webp"
     },
     {
       "id": 6,
@@ -229,7 +223,7 @@
       "technologies": ["JavaScript", "Next.js", "Sqlite"],
       "source": "https://github.com/matthew110703/foodies.git",
       "live": "https://foodies-two-omega.vercel.app/",
-      "thumbnail": "/projects/foodies.png"
+      "thumbnail": "/projects/foodies.webp"
     }
   ]
 }

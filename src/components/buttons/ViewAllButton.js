@@ -30,7 +30,7 @@ const ViewAllButton = ({ className }) => {
         </ul>
         <Image
           src={"/icons/dev.gif"}
-          alt="Dev"
+          alt="Dev Icon (Animated)"
           width={48}
           height={48}
           unoptimized

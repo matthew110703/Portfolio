@@ -23,6 +23,7 @@ const BottomNavigation = () => {
                   activeIcon={nav.activeIcon}
                   href={nav.href}
                   title={nav.label}
+                  alt={nav.label}
                 />
               </li>
             );

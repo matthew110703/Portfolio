@@ -12,12 +12,12 @@ import { slideInFromLeft } from "@/lib/motion";
 const Contact = () => {
   return (
     <section
-      aria-label="Contact"
+      aria-labelledby="contact"
       className="flex h-full w-full flex-col gap-y-4"
     >
       <header className="flex items-stretch gap-x-4">
         <ProfileCard variant="headline" headlineText="Designing, The Future" />
-        <TitleCard text={"Contact"} />
+        <TitleCard text={"Contact"} id={"contact"} />
       </header>
 
       <div className="m-auto flex flex-col items-center gap-8 p-4 md:flex-row md:items-start md:p-8">
@@ -26,9 +26,10 @@ const Contact = () => {
           variants={slideInFromLeft}
           {...slideInFromLeft}
           className="basis-1/2 space-y-4"
+          aria-labelledby="contact-form"
         >
           <header className="space-y-4">
-            <Heading text="Get in Touch" />
+            <Heading text="Get in Touch" id={"contact-form"} />
             <p className="text-sm lg:w-5/6">
               Whether you have a project idea, a collaboration opportunity, or
               just want to say hello—I’d love to hear from you!
@@ -40,7 +41,7 @@ const Contact = () => {
         </motion.section>
         <br />
         {/* Connect With Me */}
-        <section className="basis-1/2 space-y-4">
+        <section aria-labelledby="social-media" className="basis-1/2 space-y-4">
           <motion.header
             variants={slideInFromLeft}
             initial="initial"
@@ -48,15 +49,15 @@ const Contact = () => {
             viewport={{ once: true }}
             className="space-y-4"
           >
-            <Heading text="Connect with Me" />
-            <p className="text-base font-semibold">
-              Let&apos;s Create Something Amazing
-            </p>
+            <Heading text="Connect with Me" id={"social-media"} />
             <p className="text-sm">
               I’m always open to discussing new projects, creative ideas, or
               opportunities to be part of your vision. If you’re looking for a
               developer/designer who values innovation, performance, and user
               experience, let’s connect and make something great together.
+            </p>
+            <p className="text-base font-semibold">
+              Let&apos;s Create Something Amazing
             </p>
           </motion.header>
           <ContactOverview className={"lg:items-start"} />

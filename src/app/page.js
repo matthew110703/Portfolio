@@ -19,12 +19,12 @@ import { slideInFromBottom } from "@/lib/motion";
 
 const Home = () => {
   return (
-    <section aria-label="Home" className="h-full w-full space-y-4">
+    <section aria-labelledby="home" className="h-full w-full space-y-4">
       <div className="flex items-center gap-4">
         <ProfileCard />
         {/* Overview */}
         <div className="hidden w-full flex-col items-center gap-4 md:flex">
-          <TitleCard text={"Welcome"} className={"max-w-full"} />
+          <TitleCard text={"Welcome"} className={"max-w-full"} id={"home"} />
           <div className="flex gap-4">
             <ProjectCard {...portfolio.projects[0]} />
             <ViewAllButton />
@@ -54,14 +54,15 @@ const Home = () => {
               text={"macmatthew724@gmail.com"}
             />
             <ContactLink
-              icon={<Icon src={"/icons/pin.svg"} alt="pin" size={24} />}
+              type="location"
+              icon={<Icon src={"/icons/pin.svg"} alt="Location" size={24} />}
               text={"Bangalore, Karnataka"}
             />
 
             <div className="flex flex-wrap gap-4">
               <LinkButton
                 icon={<LinkedinFilled />}
-                href={portfolio.social.likedin}
+                href={portfolio.social.linkedin}
                 text={"LinkedIn"}
               />
               <LinkButton

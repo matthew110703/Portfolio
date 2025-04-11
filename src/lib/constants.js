@@ -29,8 +29,10 @@ export const navigationLinks = [
   },
   {
     label: "Say Hi!",
-    icon: <Icon size={24} src="/icons/waving-hand.svg" />,
-    activeIcon: <Icon size={24} src="/icons/waving-hand-filled.svg" />,
+    icon: <Icon alt="Contact" size={24} src="/icons/waving-hand.svg" />,
+    activeIcon: (
+      <Icon alt="Contact" size={24} src="/icons/waving-hand-filled.svg" />
+    ),
     href: "/contact",
   },
 ];

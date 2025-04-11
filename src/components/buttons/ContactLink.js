@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-const ContactLink = ({ text, icon, href, className }) => {
+const ContactLink = ({ type = "link", text, icon, href, className }) => {
   return (
     <Link
       href={href || "#"}
@@ -11,7 +11,13 @@ const ContactLink = ({ text, icon, href, className }) => {
       aria-label={text}
     >
       <span className="text-lg">{icon}</span>
-      <span>{text}</span>
+      {type === "location" ? (
+        <address className="not-italic">
+          <span>{text}</span>
+        </address>
+      ) : (
+        <span>{text}</span>
+      )}
     </Link>
   );
 };

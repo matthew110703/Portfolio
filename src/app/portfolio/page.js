@@ -10,13 +10,13 @@ import { fadeIn } from "@/lib/motion";
 const Portfolio = () => {
   return (
     <section
-      aria-label="Portfolio"
+      aria-labelledby="portfolio"
       className="flex h-full w-full flex-col gap-y-4"
     >
       <header className="flex items-stretch gap-x-4">
         <ProfileCard variant="headline" headlineText="Designing, The Future" />
 
-        <TitleCard text={"Portfolio"} />
+        <TitleCard text={"Portfolio"} id={"portfolio"} />
       </header>
 
       {/* Grid Layout */}

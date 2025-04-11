@@ -1,7 +1,10 @@
-const Heading = ({ text }) => {
+const Heading = ({ text, id }) => {
   return (
     <div className="space-y-2">
-      <h2 className="text-primary font-main text-3xl font-semibold md:text-4xl">
+      <h2
+        id={id}
+        className="text-primary font-main text-3xl font-semibold md:text-4xl"
+      >
         {text}
       </h2>
       <svg className="h-[2px] w-1/4">

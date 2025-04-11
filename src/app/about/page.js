@@ -14,9 +14,9 @@ import { aboutContainer, aboutItem } from "@/lib/motion";
 
 const About = () => {
   return (
-    <section aria-label="About" className="flex h-full w-full flex-col">
+    <section aria-labelledby="about" className="flex h-full w-full flex-col">
       <header className="mb-4 block md:hidden">
-        <TitleCard text={"About Me"} />
+        <TitleCard text={"About Me"} id={"about"} />
       </header>
 
       <div className="flex flex-col gap-4 overflow-hidden md:flex-row">
@@ -61,8 +61,8 @@ const About = () => {
             </motion.div>
 
             {/* Experience */}
-            <section id="experience" className="my-8 space-y-4">
-              <TimelineHeader title="Experience" />
+            <section aria-labelledby="experience" className="my-8 space-y-4">
+              <TimelineHeader title="Experience" id={"experience"} />
               {portfolio.experience.map((exp) => (
                 <TimelineCard
                   key={exp.id}
@@ -78,8 +78,8 @@ const About = () => {
             </section>
 
             {/* Education */}
-            <section id="experience" className="my-4 space-y-4">
-              <TimelineHeader title="Education" />
+            <section aria-labelledby="education" className="my-4 space-y-4">
+              <TimelineHeader title="Education" id={"education"} />
               {portfolio.education.map((exp) => (
                 <TimelineCard
                   key={exp.id}
