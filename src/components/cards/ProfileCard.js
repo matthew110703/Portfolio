@@ -128,7 +128,7 @@ const ProfileCard = ({ variant = "compact", headlineText = "" }) => {
               Matthew110703
             </Link>
             <Link
-              href={"/"}
+              href={process.env.CV_DRIVE_LINK || "#"}
               className="flex items-center gap-x-2 hover:font-normal"
               target="_blank"
               rel="noopener noreferrer"
