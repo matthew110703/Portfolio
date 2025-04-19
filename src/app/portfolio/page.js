@@ -5,7 +5,7 @@ import portfolio from "@/lib/portfolio.json";
 
 // motion
 import * as motion from "motion/react-client";
-import { fadeIn } from "@/lib/motion";
+import { fadeIn, slideInFromLeft } from "@/lib/motion";
 
 const Portfolio = () => {
   return (
@@ -21,14 +21,8 @@ const Portfolio = () => {
 
       {/* Grid Layout */}
       <div className="flex-1 overflow-hidden">
-        <div className="h-[80vh] overflow-y-auto">
-          <motion.div
-            variants={fadeIn}
-            initial="initial"
-            whileInView="animate"
-            transition={{ staggerChildren: 0.2 }}
-            className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-6"
-          >
+        <div className="h-full md:h-[80vh] md:overflow-y-auto">
+          <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-6">
             {/* Highlight Projects */}
             {/* Project 1 */}
             <ProjectCard
@@ -58,7 +52,7 @@ const Portfolio = () => {
                 className={"col-span-1 lg:col-span-3 lg:row-span-1"}
               />
             ))}
-          </motion.div>
+          </div>
         </div>
       </div>
     </section>

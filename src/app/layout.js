@@ -71,7 +71,10 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <head>
-      <meta name="google-site-verification" content="wICuXRKk0DYn7kRv9kYb5lB7aO78vAmc9-K7-s37XTA" />
+        <meta
+          name="google-site-verification"
+          content="wICuXRKk0DYn7kRv9kYb5lB7aO78vAmc9-K7-s37XTA"
+        />
         <meta
           name="keywords"
           content="Mathew R, Portfolio, Web Developer, JavaScript, React, Next.js"

@@ -21,12 +21,16 @@ const ContactOverview = ({ className }) => {
     <motion.footer
       variants={slideInFromBottom}
       initial="initial"
-      whileInView={"animate"}
+      whileInView="animate"
       exit="exit"
       viewport={{ once: true }}
       className={`flex flex-col items-center gap-4 ${className}`}
     >
-      <ContactLink icon={<MailFilled />} text={portfolio.email} />
+      <ContactLink
+        href={`mailto:${portfolio.email}?subject=Get%20In%20Touch!`}
+        icon={<MailFilled />}
+        text={portfolio.email}
+      />
       <ContactLink
         type={"location"}
         icon={<Icon src={"/icons/pin.svg"} alt="Location" size={24} />}

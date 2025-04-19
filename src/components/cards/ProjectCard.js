@@ -34,7 +34,9 @@ const ProjectCard = ({
       layoutId={title}
       transition={{ duration: 0.3 }}
       variants={slideInFromLeft}
-      {...slideInFromLeft}
+      initial="initial"
+      whileInView="animate"
+      viewport={{ once: true }}
       className={`border-primary group shadow-primary relative max-h-[300px] w-full max-w-full cursor-pointer justify-items-center overflow-visible rounded-3xl border-2 shadow-sm transition-all lg:max-w-[600px] ${className}`}
       style={style}
       onMouseEnter={(e) => {

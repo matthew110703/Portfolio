@@ -19,13 +19,17 @@ import { slideInFromBottom } from "@/lib/motion";
 
 const Home = () => {
   return (
-    <section aria-labelledby="home" className="h-full w-full space-y-4">
+    <section
+      role="main"
+      aria-labelledby="home"
+      className="h-full w-full space-y-4"
+    >
       <div className="flex items-center gap-4">
         <ProfileCard />
         {/* Overview */}
         <div className="hidden w-full flex-col items-center gap-4 md:flex">
           <TitleCard text={"Welcome"} className={"max-w-full"} id={"home"} />
-          <div className="flex gap-4">
+          <div className="flex w-full gap-4">
             <ProjectCard {...portfolio.projects[0]} />
             <ViewAllButton />
           </div>
@@ -51,7 +55,8 @@ const Home = () => {
           <div className="flex flex-col items-center gap-4 lg:items-start">
             <ContactLink
               icon={<MailFilled />}
-              text={"macmatthew724@gmail.com"}
+              text={portfolio.email}
+              href={`mailto:${portfolio.email}?subject=Hello!`}
             />
             <ContactLink
               type="location"

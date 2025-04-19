@@ -16,7 +16,6 @@ const ViewAllButton = ({ className }) => {
       {...slideInFromRight}
       transition={{
         when: "beforeChildren",
-        staggerChildren: 0.2,
         delayChildren: 0.3,
       }}
       className={`relative flex flex-col overflow-hidden rounded-3xl bg-white p-4 lg:p-8 ${className}`}

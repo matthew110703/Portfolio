@@ -10,7 +10,7 @@ const Icon = ({ src, alt = "icon", size = 16, className, spin = false }) => {
       className={` ${spin ? "animate-spin" : ""} ${className}`}
       aria-label={alt}
       title={alt}
-      loading="lazy"
+      priority={true}
     />
   );
 };

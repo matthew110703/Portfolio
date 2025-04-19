@@ -1,12 +1,8 @@
-import Link from "next/link";
-
 const ContactLink = ({ type = "link", text, icon, href, className }) => {
   return (
-    <Link
+    <a
       href={href || "#"}
       className={`text-primary font-body flex items-center gap-x-2 text-sm font-semibold ${className}`}
-      target="_blank"
-      rel="noopener noreferrer"
       title={text}
       aria-label={text}
     >
@@ -18,7 +14,7 @@ const ContactLink = ({ type = "link", text, icon, href, className }) => {
       ) : (
         <span>{text}</span>
       )}
-    </Link>
+    </a>
   );
 };
 

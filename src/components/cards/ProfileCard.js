@@ -13,7 +13,11 @@ import portfolio from "@/lib/portfolio.json";
 
 // Motion
 import * as motion from "motion/react-client";
-import { slideInFromTop, slideInFromRight } from "@/lib/motion";
+import {
+  slideInFromTop,
+  slideInFromRight,
+  slideInFromLeft,
+} from "@/lib/motion";
 
 const ProfileCard = ({ variant = "compact", headlineText = "" }) => {
   const variantStyles = {
@@ -37,7 +41,7 @@ const ProfileCard = ({ variant = "compact", headlineText = "" }) => {
 
   return (
     <motion.div
-      variants={variant !== "minimal" ? slideInFromTop : slideInFromRight}
+      variants={variant !== "minimal" ? slideInFromLeft : slideInFromRight}
       initial="initial"
       animate="animate"
       exit="exit"
