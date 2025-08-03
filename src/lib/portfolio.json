@@ -17,6 +17,30 @@
   "experience": [
     {
       "id": 1,
+      "title": "Frontend Developer Intern",
+      "company": {
+        "name": "SIRPI Products & Services Pvt. Ltd.",
+        "url": "https://www.sirpi.io/",
+        "location": "Bangalore, India"
+      },
+      "from": "May 2025",
+      "to": "Present",
+      "description": "Collaborating with a cross-functional team to design and develop responsive, accessible, and user-friendly web 
+interfaces using React and Tailwind CSS. 
+Implementing dynamic components, state management, and API integrations to enhance user interactions and 
+performance. 
+Writing clean, maintainable, and reusable code following modern JavaScript and Git workflows. Identified and 
+resolved UI bugs and functional issues across multiple components in a React-based codebase.", 
+      "technologies": [
+        "React.js",
+        "Tailwind CSS",
+        "ShadCN",
+        "ERP",
+        "Supabase"
+      ]
+    },
+    {
+      "id": 2,
       "title": "Full Stack Developer Intern",
       "company": {
         "name": "Unified Mentor Pvt. Ltd.",
@@ -37,7 +61,7 @@
       ]
     },
     {
-      "id": 2,
+      "id": 3,
       "title": "Data Annotator Intern",
       "company": {
         "name": "Samsung Seed Labs R&D India",
