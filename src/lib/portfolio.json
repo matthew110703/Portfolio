@@ -10,7 +10,7 @@
     "Recognized for creativity, innovation, and adaptability in fast-paced environments. I'm always eager to contribute to impactful projects and explore new opportunities to grow as a developer. Let's build something amazing together!"
   ],
   "quote": {
-    "text": "Let me take you into a deeper experience, make a moment a lasting conveyable memory. Let me help build your tribe.",
+    "text": "Let me take you into a deeper experience, make a moment a lasting, conveyable memory. Let me help build your tribe.",
     "author": "Deep Immersion"
   },
   "core_skills": ["React.js", "Node.js", "Next.js", "Python", "SQL/NoSQL"],
@@ -25,12 +25,7 @@
       },
       "from": "May 2025",
       "to": "Present",
-      "description": "Collaborating with a cross-functional team to design and develop responsive, accessible, and user-friendly web 
-interfaces using React and Tailwind CSS. 
-Implementing dynamic components, state management, and API integrations to enhance user interactions and 
-performance. 
-Writing clean, maintainable, and reusable code following modern JavaScript and Git workflows. Identified and 
-resolved UI bugs and functional issues across multiple components in a React-based codebase.", 
+      "description": "Collaborating with a cross-functional team to design and develop responsive, accessible, and user-friendly web interfaces using React and Tailwind CSS. Implementing dynamic components, state management, and API integrations to enhance user interactions and performance. Writing clean, maintainable, and reusable code following modern JavaScript and Git workflows. Identified and resolved UI bugs and functional issues across multiple components in a React-based codebase.", 
       "technologies": [
         "React.js",
         "Tailwind CSS",
