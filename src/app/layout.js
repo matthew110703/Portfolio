@@ -1,5 +1,6 @@
 import "./globals.css";
 import portfolio from "@/lib/portfolio.json";
+import { Analytics } from "@vercel/analytics/next";
 
 export const metadata = {
   title: `${portfolio.name} | ${portfolio.role}`,
@@ -101,6 +102,7 @@ export default function RootLayout({ children }) {
         className={`antialiased ${inconsolata.variable} ${poppins.variable} ${montserrat.variable}`}
       >
         <Container>{children}</Container>
+        <Analytics />
         {/* <div className="bg-primary text-shadow fixed top-0 left-0 z-50 p-4 text-xl font-semibold after:content-['mobile'] sm:after:content-['sm(>640px)'] md:after:content-['md(>768)'] lg:after:content-['lg(>1024px)'] xl:after:content-['xl(>1280px)'] 2xl:after:content-['2xl(>1536px)']"></div> */}
       </body>
     </html>
