@@ -1,6 +1,6 @@
 {
   "name": "Mathew R",
-  "role": "Software Developer",
+  "role": "Software Engineer",
   "location": "Bangalore, India",
   "email": "macmatthew724@gmail.com",
   "about": "Passionate software developer with a knack for problem-solving and a love for coding. I thrive in collaborative environments and enjoy tackling complex challenges. My goal is to create innovative solutions that make a positive impact.",
@@ -17,25 +17,38 @@
   "experience": [
     {
       "id": 1,
-      "title": "Frontend Developer Intern",
+      "title": "Frontend Engineer",
+      "company": {
+        "name": "Vananam Ventures Pvt. Ltd.",
+        "url": "https://vananam.in/",
+        "location": "Bangalore, India"
+      },
+      "from": "Dec 2025",
+      "to": "Present",
+      "description": "Developed scalable web and mobile applications using React and React Native, ensuring high performance and responsive user experiences. Implemented modern UI designs using Tailwind CSS, maintaining consistency and accessibility across platforms. Managed complex application state using Redux, improving data flow and maintainability. Collaborated with cross-functional teams and contributed to a micro frontend architecture. Identified and resolved production issues, reviewed pull requests, and actively maintained and optimized existing applications.",
+      "technologies": [
+        "React.js",
+        "React Native",
+        "Tailwind CSS",
+        "Redux",
+        "Micro Frontend"
+      ]
+    },
+    {
+      "id": 2,
+      "title": "Frontend Developer",
       "company": {
         "name": "SIRPI Products & Services Pvt. Ltd.",
         "url": "https://www.sirpi.io/",
         "location": "Bangalore, India"
       },
       "from": "May 2025",
-      "to": "Present",
-      "description": "Collaborating with a cross-functional team to design and develop responsive, accessible, and user-friendly web interfaces using React and Tailwind CSS. Implementing dynamic components, state management, and API integrations to enhance user interactions and performance. Writing clean, maintainable, and reusable code following modern JavaScript and Git workflows. Identified and resolved UI bugs and functional issues across multiple components in a React-based codebase.", 
-      "technologies": [
-        "React.js",
-        "Tailwind CSS",
-        "ShadCN",
-        "ERP",
-        "Supabase"
-      ]
+      "to": "Nov 2025",
+      "description": "Collaborated with a cross-functional team to design and develop responsive, accessible, and user-friendly web interfaces using React and Tailwind CSS. Implemented dynamic components, efficient state management, and API integrations to enhance user experience and overall application performance. Wrote clean, maintainable, and reusable code adhering to modern JavaScript standards and Git workflows. Identified and resolved UI bugs and functional issues across multiple React components. Contributed to the development of an ERP inventory management application focusing on modular architecture and scalability.",
+      "technologies": ["React.js", "Tailwind CSS", "ShadCN", "ERP", "Supabase"]
     },
     {
-      "id": 2,
+      "id": 3,
       "title": "Full Stack Developer Intern",
       "company": {
         "name": "Unified Mentor Pvt. Ltd.",
@@ -56,7 +69,7 @@
       ]
     },
     {
-      "id": 3,
+      "id": 4,
       "title": "Data Annotator Intern",
       "company": {
         "name": "Samsung Seed Labs R&D India",
@@ -243,6 +256,20 @@
       "source": "https://github.com/matthew110703/foodies.git",
       "live": "https://foodies-two-omega.vercel.app/",
       "thumbnail": "/projects/foodies.webp"
+    },
+    {
+      "id": 7,
+      "title": "Task Management API",
+      "description": "A centralized RESTful API solution for managing tasks efficiently, offering seamless integration with client-side applications. Supports user registration and authentication, CRUD operations for tasks, and task filtering for better organization. Built using Django REST Framework (DRF) for scalability, security, and performance.",
+      "technologies": [
+        "Python",
+        "Django",
+        "Django REST Framework",
+        "RESTful APIs"
+      ],
+      "source": "https://github.com/matthew110703",
+      "live": "",
+      "thumbnail": "/projects/task_api.webp"
     }
   ]
 }
