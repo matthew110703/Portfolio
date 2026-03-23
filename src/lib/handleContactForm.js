@@ -20,7 +20,7 @@ async function handleContactForm(formData) {
     values: [[name, email, message]],
   };
   try {
-    const result = service.spreadsheets.values.append({
+    const result = await service.spreadsheets.values.append({
       spreadsheetId,
       range,
       valueInputOption,
@@ -28,7 +28,7 @@ async function handleContactForm(formData) {
     });
 
     if (result.status !== 200) {
-      return true;
+      return false;
     }
 
     return true;

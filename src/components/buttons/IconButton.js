@@ -18,7 +18,7 @@ const IconButton = ({
     <Link
       role="button"
       href={href}
-      className={`text-primary w-${size / 4} ${className}`}
+      className={`text-primary ${size === 40 ? "w-10" : size === 48 ? "w-12" : "w-8"} ${className}`}
       aria-label={title}
       onClick={onClick}
       title={title}

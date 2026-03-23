@@ -10,7 +10,7 @@ import portfolio from "@/lib/portfolio.json";
 // Motion
 import * as motion from "motion/react-client";
 import { AnimatePresence } from "motion/react";
-import { fadeIn, skillsAnimation, slideInFromRight } from "@/lib/motion";
+import { fadeIn, skillsAnimation } from "@/lib/motion";
 
 const Skills = () => {
   const [show, setShow] = useState(false);
@@ -21,7 +21,6 @@ const Skills = () => {
         role="button"
         className="bg-primary static flex h-full w-1/2 flex-col items-center justify-center rounded-3xl"
         onClick={() => setShow(!show)}
-        variants={skillsAnimation}
         {...skillsAnimation}
       >
         <Image
@@ -46,7 +45,9 @@ const Skills = () => {
             <motion.div
               className="fixed inset-0 z-[999] flex h-screen w-screen flex-col items-center justify-center bg-black/50"
               onClick={() => setShow(false)}
-              variants={fadeIn}
+              role="dialog"
+              aria-modal="true"
+              aria-label="Skills"
               {...fadeIn}
             >
               <div className="bg-shadow border-primary shadow-primary flex flex-col gap-4 rounded-3xl border p-4 shadow-md">

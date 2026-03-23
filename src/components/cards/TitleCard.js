@@ -5,7 +5,6 @@ import { slideInFromTop } from "@/lib/motion";
 const TitleCard = ({ text, className, id }) => {
   return (
     <motion.div
-      variants={slideInFromTop}
       {...slideInFromTop}
       aria-label="Title"
       className={`bg-shadow shadow-primary w-full justify-center rounded-3xl p-4 shadow-md ${className}`}

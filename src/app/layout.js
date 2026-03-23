@@ -5,6 +5,19 @@ import { Analytics } from "@vercel/analytics/next";
 export const metadata = {
   title: `${portfolio.name} | ${portfolio.role}`,
   description: `Portfolio of Mathew R, Explore my work and projects as a ${portfolio.role} specializing in the tech stack of ${portfolio.core_skills[0]}, ${portfolio.core_skills[1]}, and ${portfolio.core_skills[2]}.`,
+  keywords: [
+    "Mathew R",
+    "Portfolio",
+    "Web Developer",
+    "Software Engineer",
+    "JavaScript",
+    "React",
+    "Next.js",
+    "Bangalore",
+  ],
+  verification: {
+    google: "wICuXRKk0DYn7kRv9kYb5lB7aO78vAmc9-K7-s37XTA",
+  },
   robots: {
     index: true,
     follow: true,
@@ -30,7 +43,7 @@ export const metadata = {
         height: 630,
       },
     ],
-    locale: "en",
+    locale: "en_US",
     type: "website",
   },
   twitter: {
@@ -41,6 +54,10 @@ export const metadata = {
     creator: "@MathewR",
     images: ["https://mathew-pi.vercel.app/og-image.png"],
   },
+};
+
+export const viewport = {
+  themeColor: "#000000",
 };
 
 // Fonts
@@ -72,14 +89,6 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <head>
-        <meta
-          name="google-site-verification"
-          content="wICuXRKk0DYn7kRv9kYb5lB7aO78vAmc9-K7-s37XTA"
-        />
-        <meta
-          name="keywords"
-          content="Mathew R, Portfolio, Web Developer, JavaScript, React, Next.js"
-        />
         {/* Structured data for personal branding */}
         <script
           type="application/ld+json"
@@ -89,11 +98,9 @@ export default function RootLayout({ children }) {
               "@type": "Person",
               name: portfolio.name,
               jobTitle: portfolio.role,
+              email: portfolio.email,
               url: "https://mathew-pi.vercel.app",
-              sameAs: [
-                "https://github.com/matthew110703",
-                "https://linkedin.com/in/matthew110703",
-              ],
+              sameAs: [portfolio.social.github, portfolio.social.linkedin],
             }),
           }}
         />
@@ -103,7 +110,6 @@ export default function RootLayout({ children }) {
       >
         <Container>{children}</Container>
         <Analytics />
-        {/* <div className="bg-primary text-shadow fixed top-0 left-0 z-50 p-4 text-xl font-semibold after:content-['mobile'] sm:after:content-['sm(>640px)'] md:after:content-['md(>768)'] lg:after:content-['lg(>1024px)'] xl:after:content-['xl(>1280px)'] 2xl:after:content-['2xl(>1536px)']"></div> */}
       </body>
     </html>
   );

@@ -9,15 +9,14 @@ import { slideInFromBottom } from "@/lib/motion";
 const BottomNavigation = () => {
   return (
     <motion.div
-      variants={slideInFromBottom}
       {...slideInFromBottom}
       className="bg-shadow fixed bottom-2 left-1/2 mx-auto max-w-full min-w-sm -translate-x-1/2 rounded-3xl p-4 sm:w-full lg:hidden"
     >
-      <nav>
+      <nav aria-label="Mobile navigation">
         <ul className="flex list-none justify-around">
-          {navigationLinks.map((nav, idx) => {
+          {navigationLinks.map((nav) => {
             return (
-              <li key={idx}>
+              <li key={nav.href}>
                 <IconButton
                   icon={nav.icon}
                   activeIcon={nav.activeIcon}

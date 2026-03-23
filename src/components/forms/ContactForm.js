@@ -22,7 +22,6 @@ const ContactForm = () => {
     setIsSuccess(false);
 
     const formData = new FormData(e.target);
-    const data = Object.fromEntries(formData.entries());
 
     try {
       const res = await handleContactForm(formData);
@@ -32,8 +31,7 @@ const ContactForm = () => {
       }
       setIsSuccess(true);
       e.target.reset();
-    } catch (error) {
-      console.error("Error submitting form:", error);
+    } catch {
       setError(
         "An error occurred while sending the message. Please try again.",
       );

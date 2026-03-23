@@ -45,7 +45,6 @@ const Home = () => {
       </div>
 
       <motion.section
-        variants={slideInFromBottom}
         {...slideInFromBottom}
         aria-label="About"
       >

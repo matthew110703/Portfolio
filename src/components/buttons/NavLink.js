@@ -9,6 +9,7 @@ const NavLink = ({ href = "#", text = "", className, ...rest }) => {
     <Link
       href={href}
       title={text}
+      aria-current={pathname === href ? "page" : undefined}
       className={`hover:shadow-primary origin-center -rotate-90 rounded-3xl p-2 text-sm font-semibold transition-all hover:shadow-sm ${pathname === href ? "text-primary" : "text-primary/60"} ${className}`}
       {...rest}
     >

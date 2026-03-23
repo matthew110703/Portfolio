@@ -37,6 +37,3 @@ body {
   width: 5px;
 }
 
-details::after {
-  content: "";
-}

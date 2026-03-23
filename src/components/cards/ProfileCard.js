@@ -13,11 +13,9 @@ import portfolio from "@/lib/portfolio.json";
 
 // Motion
 import * as motion from "motion/react-client";
-import {
-  slideInFromTop,
-  slideInFromRight,
-  slideInFromLeft,
-} from "@/lib/motion";
+import { slideInFromRight, slideInFromLeft } from "@/lib/motion";
+
+const githubUsername = portfolio.social.github.split("/").pop();
 
 const ProfileCard = ({ variant = "compact", headlineText = "" }) => {
   const variantStyles = {
@@ -129,7 +127,7 @@ const ProfileCard = ({ variant = "compact", headlineText = "" }) => {
               aria-label="Github Profile"
             >
               <GithubFilled style={{ fontSize: "16px" }} />
-              Matthew110703
+              {githubUsername}
             </Link>
             <Link
               href={process.env.CV_DRIVE_LINK || "#"}

@@ -23,7 +23,6 @@ const Contact = () => {
       <div className="m-auto flex flex-col items-center gap-8 p-4 md:flex-row md:items-start md:p-8">
         {/* Get In Touch */}
         <motion.section
-          variants={slideInFromLeft}
           {...slideInFromLeft}
           className="basis-1/2 space-y-4"
           aria-labelledby="contact-form"
@@ -39,7 +38,6 @@ const Contact = () => {
           {/* Contact Form */}
           <ContactForm />
         </motion.section>
-        <br />
         {/* Connect With Me */}
         <section aria-labelledby="social-media" className="basis-1/2 space-y-4">
           <motion.header

@@ -11,7 +11,6 @@ import { slideInFromRight } from "@/lib/motion";
 const SkillsShowcase = ({ className }) => {
   return (
     <motion.div
-      variants={slideInFromRight}
       {...slideInFromRight}
       transition={{
         when: "beforeChildren",

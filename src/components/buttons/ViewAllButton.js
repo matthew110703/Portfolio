@@ -12,7 +12,6 @@ import { slideInFromRight, viewAllButtonAnimation } from "@/lib/motion";
 const ViewAllButton = ({ className }) => {
   return (
     <motion.div
-      variants={slideInFromRight}
       {...slideInFromRight}
       transition={{
         when: "beforeChildren",
@@ -37,7 +36,6 @@ const ViewAllButton = ({ className }) => {
       </div>
 
       <motion.div
-        variants={viewAllButtonAnimation}
         {...viewAllButtonAnimation}
         className="bg-primary bottom-0 left-0 w-full"
       >

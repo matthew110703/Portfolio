@@ -58,14 +58,13 @@ const ProjectCard = ({
         width={400}
         height={300}
         className={`h-full w-full rounded-3xl object-cover ${imageAspect === "video" ? "aspect-video" : "aspect-square"}`}
-        priority={true}
+        priority
       />
 
       <AnimatePresence>
         {/* Details */}
         {showDetails && (
           <motion.div
-            variants={fadeIn}
             {...fadeIn}
             className="border-primary bg-shadow absolute top-0 z-50 flex min-h-full w-full flex-col justify-center gap-4 rounded-3xl border-2 p-4 shadow-md sm:p-6"
           >

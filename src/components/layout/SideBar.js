@@ -16,7 +16,6 @@ const SideBar = ({ className }) => {
   return (
     <motion.div
       className={`bg-shadow inset-shadow-primary hidden h-full max-h-[720px] min-h-[600px] flex-col items-center justify-between rounded-3xl py-8 inset-shadow-sm lg:flex ${className}`}
-      variants={slideInFromLeft}
       {...slideInFromLeft}
     >
       <Link href={"/"} title="GitHub Profile">
@@ -26,7 +25,7 @@ const SideBar = ({ className }) => {
           size={32}
         />
       </Link>
-      <nav className="flex flex-col-reverse items-center gap-y-12 place-self-end">
+      <nav aria-label="Main navigation" className="flex flex-col-reverse items-center gap-y-12 place-self-end">
         {navigationLinks.map((link) => (
           <NavLink key={link.label} href={link.href} text={link.label} />
         ))}
