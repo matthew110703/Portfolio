@@ -1,6 +1,8 @@
 # *
 User-agent: *
 Allow: /
+Disallow: /v1
+Disallow: /v1/
 
 # Host
 Host: https://mathew-pi.vercel.app

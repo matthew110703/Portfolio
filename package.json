@@ -7,28 +7,31 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint .",
+    "typecheck": "tsc --noEmit",
     "postbuild": "next-sitemap"
   },
   "dependencies": {
-    "@ant-design/icons": "^6.0.0",
-    "@vercel/analytics": "^1.5.0",
-    "google-auth-library": "^9.15.1",
-    "googleapis": "^148.0.0",
-    "motion": "^12.6.3",
-    "next": "^16.2.1",
+    "@ant-design/icons": "^6.3.4",
+    "@vercel/analytics": "^2.0.1",
+    "google-auth-library": "^11.3.4",
+    "googleapis": "^190.0.0",
+    "motion": "^14.14.0",
+    "next": "^16.4.6",
     "next-sitemap": "^4.2.3",
-    "react": "^19.2.4",
-    "react-dom": "^19.2.4"
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1"
   },
   "devDependencies": {
-    "@eslint/eslintrc": "^3",
-    "@tailwindcss/postcss": "^4.0.15",
-    "eslint": "^9",
-    "eslint-config-next": "^16.2.1",
-    "postcss": "^8",
-    "prettier": "^3.5.3",
-    "prettier-plugin-tailwindcss": "^0.6.11",
-    "prop-types": "^15.8.1",
-    "tailwindcss": "^4.0.15"
+    "@tailwindcss/postcss": "^4.3.5",
+    "@types/node": "^24.19.2",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "eslint": "^9.39.5",
+    "eslint-config-next": "^16.4.6",
+    "postcss": "^8.5.33",
+    "prettier": "^3.10.1",
+    "prettier-plugin-tailwindcss": "^0.8.1",
+    "tailwindcss": "^4.3.5",
+    "typescript": "^6.0.3"
   }
 }

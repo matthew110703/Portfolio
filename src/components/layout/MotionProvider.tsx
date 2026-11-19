@@ -1,0 +1,10 @@
+"use client";
+
+import type { ReactNode } from "react";
+import { MotionConfig } from "motion/react";
+
+const MotionProvider = ({ children }: { children: ReactNode }) => {
+  return <MotionConfig reducedMotion="user">{children}</MotionConfig>;
+};
+
+export default MotionProvider;
